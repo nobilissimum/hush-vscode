@@ -178,6 +178,7 @@
     {
       "name": "blue",
       "scopes": [
+        "editorBracketHighlight.foreground3",
         "textLink.foreground",
         "terminal.ansiBlue",
         "terminal.ansiBrightBlue"
@@ -216,6 +217,7 @@
       "name": "pink",
       "scopes": [
         "charts.red",
+        "editorBracketHighlight.foreground2",
         "terminal.ansiBrightMagenta",
         "terminal.ansiBrightRed",
         "terminal.ansiMagenta",
@@ -468,6 +470,7 @@
         "charts.orange",
         "charts.yellow",
         "diffEditor.moveActive.border",
+        "editorBracketHighlight.foreground1",
         "editorUnicodeHighlight.border",
         "terminal.ansiBrightYellow",
         "terminal.ansiYellow"
