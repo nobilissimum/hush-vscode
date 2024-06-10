@@ -123,8 +123,7 @@
     {
       "name": "black",
       "scopes": [
-        "terminal.ansiBlack",
-        "terminal.ansiBrightBlack"
+        "terminal.ansiBlack"
       ]
     },
     {
@@ -314,7 +313,8 @@
       "name": "white",
       "scopes": [
         "sideBarSectionHeader.foreground",
-        "statusBar.foreground"
+        "statusBar.foreground",
+        "terminal.ansiBrightBlack"
       ]
     },
     {
