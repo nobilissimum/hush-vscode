@@ -191,6 +191,7 @@
     {
       "name": "green",
       "scopes": [
+        "charts.green",
         "terminal.ansiGreen",
         "terminal.ansiBrightGreen"
       ]
@@ -205,6 +206,7 @@
     {
       "name": "pink",
       "scopes": [
+        "charts.red",
         "terminal.ansiBrightMagenta",
         "terminal.ansiBrightRed",
         "terminal.ansiMagenta",
@@ -216,6 +218,12 @@
       "name": "pink",
       "scopes": [
         "diffEditor.removedTextBackground"
+      ]
+    },
+    {
+      "name": "purple",
+      "scopes": [
+        "charts.purple"
       ]
     },
     {
@@ -393,6 +401,8 @@
     {
       "name": "yellow",
       "scopes": [
+        "charts.orange",
+        "charts.yellow",
         "terminal.ansiBrightYellow",
         "terminal.ansiYellow"
       ]
