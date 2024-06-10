@@ -50,12 +50,26 @@
       ]
     },
     {
+      "alpha": "88",
+      "name": "@fail",
+      "scopes": [
+        "inputValidation.errorBackground"
+      ]
+    },
+    {
       "name": "@info",
       "scopes": [
         "editorInfo.foreground",
         "errorLens.infoForeground",
         "errorLens.infoForegroundLight",
         "minimap.infoHighlight"
+      ]
+    },
+    {
+      "alpha": "88",
+      "name": "@info",
+      "scopes": [
+        "inputValidation.infoBackground"
       ]
     },
     {
@@ -77,6 +91,13 @@
         "minimap.warningHighlight",
         "minimap.hintHighlight",
         "gitDecoration.modifiedResourceForeground"
+      ]
+    },
+    {
+      "alpha": "88",
+      "name": "@warn",
+      "scopes": [
+        "inputValidation.warningBackground"
       ]
     },
     {
