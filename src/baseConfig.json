@@ -177,6 +177,7 @@
     {
       "name": "blue",
       "scopes": [
+        "textLink.foreground",
         "terminal.ansiBlue",
         "terminal.ansiBrightBlue"
       ]
