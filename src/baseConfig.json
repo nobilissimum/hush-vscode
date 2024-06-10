@@ -1,6 +1,7 @@
 {
   "colors": [
     {
+      "alpha": "dd",
       "name": "$find",
       "scopes": [
         "minimap.findMatchHighlight",
