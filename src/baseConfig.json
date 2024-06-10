@@ -3,6 +3,7 @@
     {
       "name": "$debug",
       "scopes": [
+        "commandCenter.debuggingBackground",
         "statusBar.debuggingBackground"
       ]
     },
