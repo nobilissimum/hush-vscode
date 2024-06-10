@@ -1,0 +1,659 @@
+{
+  "colors": [
+    {
+      "name": "$find",
+      "scopes": [
+        "minimap.findMatchHighlight",
+        "minimap.selectionHighlight"
+      ]
+    },
+    {
+      "alpha": "77",
+      "name": "$find",
+      "scopes": [
+        "editor.findMatchBackground"
+      ]
+    },
+    {
+      "alpha": "44",
+      "name": "$find",
+      "scopes": [
+        "editor.findMatchHighlightBackground"
+      ]
+    },
+    {
+      "name": "@fail",
+      "scopes": [
+        "editorError.foreground",
+        "errorForeground",
+        "errorLens.errorForeground",
+        "errorLens.errorForegroundLight",
+        "gitDecoration.conflictingResourceForeground",
+        "gitDecoration.deletedResourceForeground",
+        "list.errorForeground",
+        "list.invalidItemForeground",
+        "minimap.errorHighlight"
+      ]
+    },
+    {
+      "name": "@info",
+      "scopes": [
+        "editorInfo.foreground",
+        "errorLens.infoForeground",
+        "errorLens.infoForegroundLight",
+        "minimap.infoHighlight"
+      ]
+    },
+    {
+      "name": "@success",
+      "scopes": [
+        "gitDecoration.untrackedResourceForeground"
+      ]
+    },
+    {
+      "name": "@warn",
+      "scopes": [
+        "editorHint.foreground",
+        "editorWarning.foreground",
+        "errorLens.hintForeground",
+        "errorLens.hintForegroundLight",
+        "errorLens.warningForeground",
+        "errorLens.warningForegroundLight",
+        "list.warningForeground",
+        "minimap.warningHighlight",
+        "minimap.hintHighlight",
+        "gitDecoration.modifiedResourceForeground"
+      ]
+    },
+    {
+      "name": "_dark",
+      "scopes": [
+        "activityBar.background",
+        "debugToolBar.background",
+        "dropdown.background",
+        "editorSuggestWidget.background",
+        "editorSuggestWidget.border",
+        "editorWidget.border",
+        "input.background",
+        "panel.background",
+        "peekView.border",
+        "peekViewResult.background",
+        "peekViewTitle.background",
+        "sideBarSectionHeader.background",
+        "statusBar.background",
+        "terminal.background",
+        "titleBar.activeBackground",
+        "titleBar.inactiveBackground"
+      ]
+    },
+    {
+      "name": "_light",
+      "scopes": [
+        "editor.background",
+        "tab.activeBackground"
+      ]
+    },
+    {
+      "name": "_main",
+      "scopes": [
+        "editorGroupHeader.tabsBackground",
+        "editorWidget.background",
+        "peekViewEditor.background",
+        "sideBar.background",
+        "tab.inactiveBackground"
+      ]
+    },
+    {
+      "name": "accentColor",
+      "scopes": [
+        "activityBar.activeBorder",
+        "activityBarBadge.background",
+        "badge.background",
+        "button.background",
+        "editorCursor.foreground",
+        "editorSuggestWidget.selectedBackground",
+        "list.activeSelectionBackground",
+        "list.inactiveFocusBackground",
+        "panelTitle.activeBorder",
+        "pickerGroup.border",
+        "pickerGroup.foreground"
+      ]
+    },
+    {
+      "name": "black",
+      "scopes": [
+        "terminal.ansiBlack",
+        "terminal.ansiBrightBlack"
+      ]
+    },
+    {
+      "alpha": "88",
+      "name": "black",
+      "scopes": [
+        "scrollbarSlider.activeBackground"
+      ]
+    },
+    {
+      "alpha": "66",
+      "name": "black",
+      "scopes": [
+        "scrollbarSlider.background",
+        "scrollbarSlider.hoverBackground"
+      ]
+    },
+    {
+      "alpha": "33",
+      "name": "black",
+      "scopes": [
+        "list.hoverBackground",
+        "menu.border",
+        "menu.separatorBackground",
+        "minimapSlider.activeBackground"
+      ]
+    },
+    {
+      "alpha": "22",
+      "name": "black",
+      "scopes": [
+        "editor.findRangeHighlightBackground",
+        "editor.lineHighlightBackground",
+        "editor.rangeHighlightBackground",
+        "minimapSlider.background",
+        "minimapSlider.hoverBackground"
+      ]
+    },
+    {
+      "name": "blue",
+      "scopes": [
+        "terminal.ansiBlue",
+        "terminal.ansiBrightBlue"
+      ]
+    },
+    {
+      "name": "cyan",
+      "scopes": [
+        "terminal.ansiCyan",
+        "terminal.ansiBrightCyan"
+      ]
+    },
+    {
+      "name": "green",
+      "scopes": [
+        "terminal.ansiGreen",
+        "terminal.ansiBrightGreen"
+      ]
+    },
+    {
+      "alpha": "1a",
+      "name": "green",
+      "scopes": [
+        "diffEditor.insertedTextBackground"
+      ]
+    },
+    {
+      "name": "pink",
+      "scopes": [
+        "terminal.ansiBrightMagenta",
+        "terminal.ansiBrightRed",
+        "terminal.ansiMagenta",
+        "terminal.ansiRed"
+      ]
+    },
+    {
+      "alpha": "1a",
+      "name": "pink",
+      "scopes": [
+        "diffEditor.removedTextBackground"
+      ]
+    },
+    {
+      "name": "transparent",
+      "scopes": [
+        "commandCenter.activeBorder",
+        "commandCenter.border",
+        "commandCenter.inactiveBorder",
+        "editorBracketMatch.border",
+        "errorLens.errorBackground",
+        "errorLens.errorBackgroundLight",
+        "errorLens.errorMessageBackground",
+        "errorLens.errorRangeBackground",
+        "errorLens.hintBackground",
+        "errorLens.hintBackgroundLight",
+        "errorLens.hintMessageBackground",
+        "errorLens.hintRangeBackground",
+        "errorLens.infoBackground",
+        "errorLens.infoBackgroundLight",
+        "errorLens.infoMessageBackground",
+        "errorLens.infoRangeBackground",
+        "errorLens.warningBackground",
+        "errorLens.warningBackgroundLight",
+        "errorLens.warningMessageBackground",
+        "errorLens.warningRangeBackground",
+        "focusBorder",
+        "inlineChat.shadow",
+        "list.dropBackground",
+        "listFilterWidget.shadow",
+        "menu.selectionBorder",
+        "panel.border",
+        "panelSection.dropBackground",
+        "scrollbar.shadow",
+        "sideBar.border",
+        "sideBar.dropBackground",
+        "statusBar.border",
+        "statusBar.focusBorder",
+        "tab.activeBorder",
+        "tab.border",
+        "terminal.dropBackground",
+        "titleBar.border",
+        "widget.shadow",
+        "window.inactiveBorder"
+      ]
+    },
+    {
+      "name": "white",
+      "scopes": [
+        "terminal.ansiBrightWhite",
+        "terminal.ansiWhite"
+      ]
+    },
+    {
+      "alpha": "ef",
+      "name": "white",
+      "scopes": [
+        "editorSuggestWidget.foreground",
+        "editorSuggestWidget.highlightForeground"
+      ]
+    },
+    {
+      "alpha": "ee",
+      "name": "white",
+      "scopes": [
+        "activityBar.foreground",
+        "editor.findMatchForeground",
+        "editor.findMatchHighlightForeground",
+        "input.foreground",
+        "statusBarItem.hoverForeground",
+        "tab.activeForeground",
+        "list.activeSelectionForeground",
+        "list.highlightForeground",
+        "list.hoverForeground",
+        "sideBar.foreground"
+      ]
+    },
+    {
+      "alpha": "d4",
+      "name": "white",
+      "scopes": [
+        "editor.foreground",
+        "terminal.foreground"
+      ]
+    },
+    {
+      "alpha": "bb",
+      "name": "white",
+      "scopes": [
+        "sideBarTitle.foreground"
+      ]
+    },
+    {
+      "alpha": "cc",
+      "name": "white",
+      "scopes": [
+        "list.inactiveSelectionForeground",
+        "errorLens.statusBarErrorForeground",
+        "errorLens.statusBarHintForeground",
+        "errorLens.statusBarIconErrorForeground",
+        "errorLens.statusBarIconWarningForeground",
+        "errorLens.statusBarInfoForeground",
+        "errorLens.statusBarWarningForeground"
+      ]
+    },
+    {
+      "alpha": "77",
+      "name": "white",
+      "scopes": [
+        "sideBarSectionHeader.foreground",
+        "statusBar.foreground"
+      ]
+    },
+    {
+      "alpha": "66",
+      "name": "white",
+      "scopes": [
+        "editorIndentGuide.activeBackground1",
+        "editorIndentGuide.activeBackground2",
+        "editorIndentGuide.activeBackground3",
+        "editorIndentGuide.activeBackground4",
+        "editorIndentGuide.activeBackground5",
+        "editorIndentGuide.activeBackground6",
+        "editorRuler.foreground",
+        "gitDecoration.ignoredResourceForeground",
+        "input.placeholderForeground",
+        "list.focusBackground",
+        "tab.inactiveForeground"
+      ]
+    },
+    {
+      "alpha": "33",
+      "name": "white",
+      "scopes": [
+        "activityBar.inactiveForeground",
+        "list.inactiveSelectionBackground",
+        "editorOverviewRuler.findMatchForeground"
+      ]
+    },
+    {
+      "alpha": "22",
+      "name": "white",
+      "scopes": [
+        "button.secondaryBackground",
+        "editor.selectionBackground",
+        "editor.selectionHighlightBackground",
+        "editorIndentGuide.background1",
+        "editorIndentGuide.background2",
+        "editorIndentGuide.background3",
+        "editorIndentGuide.background4",
+        "editorIndentGuide.background5",
+        "editorIndentGuide.background6",
+        "editorLineNumber.foreground"
+      ]
+    },
+    {
+      "alpha": "11",
+      "name": "white",
+      "scopes": [
+        "editorBracketMatch.background",
+        "statusBarItem.hoverBackground"
+      ]
+    },
+    {
+      "name": "yellow",
+      "scopes": [
+        "terminal.ansiBrightYellow",
+        "terminal.ansiYellow"
+      ]
+    }
+  ],
+  "tokenColors": {
+    "@fail": [
+      {
+        "scope": [
+          "markup.underline.error"
+        ]
+      }
+    ],
+    "@info": [
+      {
+        "scope": [
+          "markup.underline.info"
+        ]
+      }
+    ],
+    "@success": [],
+    "@warn": [
+      {
+        "scope": [
+          "markup.underline.warning",
+          "markup.underline.hint"
+        ]
+      }
+    ],
+    "blue": [
+      {
+        "scope": [
+          "entity.name.function",
+          "entity.name.section.group-title.ini",
+          "entity.name.type.js",
+          "entity.name.type.ts",
+          "entity.name.type.tsx",
+          "keyword.other.special-method.ruby",
+          "markup.quote.markdown",
+          "meta.function-call.generic.python",
+          "punctuation.definition.string.begin.markdown",
+          "punctuation.definition.string.end.markdown",
+          "support.function",
+          "support.variable.property.dom.js",
+          "support.variable.property.dom.ts",
+          "variable.graphql",
+          "variable.other.object.property.js",
+          "variable.other.property"
+        ]
+      },
+      {
+        "scope": [
+          "markup.underline.link.image.markdown",
+          "markup.underline.link.markdown",
+          "meta.object-literal.key.js",
+          "meta.object-literal.key.ts",
+          "support.constant.parity.css",
+          "support.type.property-name.css",
+          "support.type.property-name.media.css"
+        ]
+      },
+      {
+        "scope": [
+          "token.info-token"
+        ]
+      },
+      {
+        "fontStyle": "italic",
+        "scope": [
+          "markup.quote.markdown"
+        ]
+      }
+    ],
+    "pink": [
+      {
+        "scope": [
+          "token.error-token"
+        ]
+      },
+      {
+        "scope": [
+          "constant.language.boolean.yaml",
+          "constant.name.attribute.tag.jade",
+          "constant.other.database-name.sql",
+          "constant.other.table-name.sql",
+          "keyword.control",
+          "meta.definition.variable.name.java",
+          "storage.modifier.async.js",
+          "storage.modifier.cs",
+          "storage.modifier.import.java",
+          "storage.modifier.java",
+          "storage.modifier.js",
+          "storage.modifier.perl",
+          "storage.modifier.ts",
+          "storage.modifier.tsx",
+          "support.class.component.html",
+          "support.class.component.js",
+          "support.class.component.ts",
+          "support.class.component.tsx",
+          "support.variable.property.js"
+        ]
+      }
+    ],
+    "purple": [
+      {
+        "scope": [
+          "entity.name.tag",
+          "keyword.const.go",
+          "keyword.function.go",
+          "keyword.import.go",
+          "keyword.operator",
+          "keyword.other.alias.sql",
+          "keyword.other.class.cs",
+          "keyword.other.default",
+          "keyword.other.definition.ini",
+          "keyword.other.DML.sql",
+          "keyword.other.important.css",
+          "keyword.package.go",
+          "keyword.type.cs",
+          "keyword.type.graphql",
+          "keyword.var.go",
+          "markup.italic.markdown",
+          "meta.tag.sgml.doctype.html",
+          "punctuation.definition.block.tag.jsdoc",
+          "punctuation.definition.directive",
+          "punctuation.definition.italic.markdown",
+          "punctuation.definition.keyword",
+          "punctuation.definition.storage.type.objc",
+          "punctuation.support.type.property-name.begin.json",
+          "punctuation.support.type.property-name.end.json",
+          "storage.type",
+          "storage.type.annotation.java",
+          "storage.type.java",
+          "support.constant.math",
+          "support.type.property-name.json"
+        ]
+      },
+      {
+        "scope": [
+          "token.debug-token"
+        ]
+      },
+      {
+        "fontStyle": "italic",
+        "scope": [
+          "markup.italic.markdown",
+          "punctuation.definition.italic.markdown"
+        ]
+      }
+    ],
+    "white": [
+      {
+        "alpha": "ee",
+        "scope": [
+          "constant.language.import-export-all.js",
+          "constant.language.import-export-all.ts",
+          "constant.language.import-export-all.tsx",
+          "constant.other.color",
+          "entity.name.type.instance",
+          "meta.paragraph.markdown",
+          "meta.parameters.js",
+          "meta.property-name.css",
+          "meta.property-value.css",
+          "punctuation.definition.bracket.curly.begin.jsdoc",
+          "punctuation.definition.bracket.curly.end.jsdoc",
+          "punctuation.definition.constant.css",
+          "punctuation.definition.dictionary",
+          "punctuation.definition.variable.less",
+          "punctuation.section.function.begin.bracket.round.css",
+          "punctuation.section.function.end.bracket.round.css",
+          "punctuation.section.media.begin.bracket.curly.css",
+          "punctuation.section.media.end.bracket.curly.css",
+          "punctuation.section.property-list.begin.bracket.curly.css",
+          "punctuation.section.property-list.begin.bracket.curly.scss",
+          "punctuation.section.property-list.end.bracket.curly.css",
+          "punctuation.section.property-list.end.bracket.curly.scss",
+          "punctuation.separator.comma.js",
+          "punctuation.separator.dictionary.pair",
+          "punctuation.separator.list.comma.css",
+          "source",
+          "string.other.link.description.title.markdown",
+          "support.constant.color",
+          "text.html.basic",
+          "text.html.markdown",
+          "text.jade",
+          "variable.assignment",
+          "variable.interpolation.scss",
+          "variable.other",
+          "variable.other.object"
+        ]
+      },
+      {
+        "alpha": "cc",
+        "scope": [
+          "meta.brace",
+          "meta.group.regexp",
+          "punctuation",
+          "source.js-ignored-vscode",
+          "string.regexp.js",
+          "support.constant",
+          "support.type.object.module.js"
+        ]
+      },
+      {
+        "alpha": "aa",
+        "scope": [
+          "punctuation.separator.key-value"
+        ]
+      },
+      {
+        "alpha": 92,
+        "fontStyle": "italic",
+        "scope": [
+          "comment",
+          "punctuation.definition.comment",
+          "string.quoted.docstring.multi.python"
+        ]
+      }
+    ],
+    "yellow": [
+      {
+        "scope": [
+          "constant.numeric.css",
+          "entity.name.type.class",
+          "entity.name.type.interface.ts",
+          "entity.name.type.module.js",
+          "entity.name.type.module.ts",
+          "entity.name.type.module.tsx",
+          "entity.other.attribute-name",
+          "entity.other.inherited-class",
+          "support.class",
+          "support.constant.json.js",
+          "support.constant.property-value.css",
+          "support.constant.property-value.scss",
+          "support.constant.property.math",
+          "support.type.graphql",
+          "support.type.primitive.ts",
+          "support.variable.dom.js",
+          "support.variable.dom.ts",
+          "support.variable.dom.tsx",
+          "support.variable.object.node.js",
+          "support.variable.object.process.js",
+          "support.variable.property.process.js",
+          "constant.numeric",
+          "keyword.other.unit",
+          "variable.parameter.function"
+        ]
+      },
+      {
+        "scope": [
+          "token.warn-token"
+        ]
+      },
+      {
+        "scope": [
+          "punctuation.definition.interpolation.begin.bracket.curly.scss",
+          "punctuation.definition.interpolation.end.bracket.curly.scss",
+          "punctuation.definition.metadata.markdown",
+          "variable.language.special.self.python",
+          "variable.language.super",
+          "variable.language.this.js",
+          "variable.language.this.ts"
+        ]
+      },
+      {
+        "scope": [
+          "entity.name.section.markdown",
+          "meta.object-literal.key",
+          "punctuation.definition.heading.markdown",
+          "source.coffee.embedded.source",
+          "string.interpolated.jade",
+          "string.quoted",
+          "string.template.js",
+          "string.unquoted.plain.out.yaml",
+          "support.type.builtin.graphql",
+          "support.type.property-name"
+        ]
+      },
+      {
+        "fontStyle": "bold",
+        "scope": [
+          "markup.bold.markdown",
+          "punctuation.definition.bold.markdown"
+        ]
+      }
+    ]
+  }
+}

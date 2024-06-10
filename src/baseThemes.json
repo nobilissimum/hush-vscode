@@ -1,0 +1,21 @@
+{
+  "$find": "#dbd068",
+  "@fail": "#bc5c7e",
+  "@info": "#74add2",
+  "@success": "#89a865",
+  "@warn": "#fffac2",
+  "_dark": "#121c26",
+  "_light": "#202733",
+  "_main": "#1d232e",
+  "accentColor": "#006c62",
+  "black": "#000000",
+  "blue": "#74add2",
+  "brightBlack": "#333333",
+  "cyan": "#2d949f",
+  "green": "#89a865",
+  "pink": "#cf8186",
+  "purple": "#a980c4",
+  "transparent": "#00000000",
+  "white": "#eeeeee",
+  "yellow": "#cec999"
+}

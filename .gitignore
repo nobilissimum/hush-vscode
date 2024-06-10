@@ -1,0 +1,9 @@
+*.vsix
+*.hidden*
+*-color-theme.json
+
+# Python
+Pipfile.lock
+__pycache__
+*.pyc
+.venv
