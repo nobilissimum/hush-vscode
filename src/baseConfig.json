@@ -327,6 +327,7 @@
       "name": "white",
       "scopes": [
         "list.inactiveSelectionForeground",
+        "editorActiveLineNumber.foreground",
         "errorLens.statusBarErrorForeground",
         "errorLens.statusBarHintForeground",
         "errorLens.statusBarIconErrorForeground",
