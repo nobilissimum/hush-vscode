@@ -1,5 +1,7 @@
 {
+  "$debug": "#aaa152",
   "$find": "#dbd068",
+  "$noFolder": "#3c88b9",
   "@fail": "#bc5c7e",
   "@info": "#74add2",
   "@success": "#89a865",

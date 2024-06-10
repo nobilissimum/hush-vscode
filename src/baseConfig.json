@@ -1,6 +1,12 @@
 {
   "colors": [
     {
+      "name": "$debug",
+      "scopes": [
+        "statusBar.debuggingBackground"
+      ]
+    },
+    {
       "alpha": "dd",
       "name": "$find",
       "scopes": [
@@ -20,6 +26,12 @@
       "name": "$find",
       "scopes": [
         "editor.findMatchHighlightBackground"
+      ]
+    },
+    {
+      "name": "$noFolder",
+      "scopes": [
+        "statusBar.noFolderBackground"
       ]
     },
     {
@@ -241,6 +253,10 @@
         "sideBar.dropBackground",
         "statusBar.border",
         "statusBar.focusBorder",
+        "statusBarItem.hoverBackground",
+        "statusBarItem.compactHoverBackground",
+        "statusBarItem.remoteBackground",
+        "statusBarItem.remoteHoverBackground",
         "tab.activeBorder",
         "tab.border",
         "terminal.dropBackground",
@@ -252,6 +268,8 @@
     {
       "name": "white",
       "scopes": [
+        "statusBarItem.hoverForeground",
+        "statusBarItem.remoteHoverForeground",
         "terminal.ansiBrightWhite",
         "terminal.ansiWhite"
       ]
@@ -272,7 +290,6 @@
         "editor.findMatchForeground",
         "editor.findMatchHighlightForeground",
         "input.foreground",
-        "statusBarItem.hoverForeground",
         "tab.activeForeground",
         "list.activeSelectionForeground",
         "list.highlightForeground",
@@ -309,11 +326,18 @@
       ]
     },
     {
+      "alpha": "aa",
+      "name": "white",
+      "scopes": [
+        "statusBar.foreground",
+        "statusBarItem.remoteForeground"
+      ]
+    },
+    {
       "alpha": "77",
       "name": "white",
       "scopes": [
         "sideBarSectionHeader.foreground",
-        "statusBar.foreground",
         "terminal.ansiBrightBlack"
       ]
     },
@@ -363,8 +387,7 @@
       "alpha": "11",
       "name": "white",
       "scopes": [
-        "editorBracketMatch.background",
-        "statusBarItem.hoverBackground"
+        "editorBracketMatch.background"
       ]
     },
     {
