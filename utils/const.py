@@ -17,3 +17,5 @@ THEME_NAME: Final[str] = "Hush"
 THEME_FILE_EXTENSION: Final[str] = "-color-theme.json"
 
 HIDDEN_COLORS_PATH: Final[str] = "colors.hidden.json"
+
+DEV_DIRPATH: Final[str] = "utils"
