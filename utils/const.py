@@ -1,5 +1,7 @@
 from typing import Final
 
+DEFAULT_THEME_MODE: Final[str] = "vs-dark"
+
 COLOR_HEX_LENGTH: Final[int] = 9
 
 SRC_BASE_CONFIG_PATH: Final[str] = "src/baseConfig.json"
@@ -17,3 +19,7 @@ THEME_NAME: Final[str] = "Hush"
 THEME_FILE_EXTENSION: Final[str] = "-color-theme.json"
 
 HIDDEN_COLORS_PATH: Final[str] = "colors.hidden.json"
+
+DEV_DIRPATH: Final[str] = "utils"
+
+NODE_PACKAGE_PATH: Final[str] = "package.json"
