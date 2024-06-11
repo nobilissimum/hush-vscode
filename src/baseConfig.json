@@ -50,10 +50,20 @@
       ]
     },
     {
-      "alpha": "88",
+      "alpha": "77",
       "name": "@fail",
       "scopes": [
         "inputValidation.errorBackground"
+      ]
+    },
+    {
+      "alpha": "22",
+      "name": "@fail",
+      "scopes": [
+        "errorLens.errorBackground",
+        "errorLens.errorBackgroundLight",
+        "errorLens.errorMessageBackground",
+        "errorLens.errorRangeBackground"
       ]
     },
     {
@@ -66,10 +76,20 @@
       ]
     },
     {
-      "alpha": "88",
+      "alpha": "77",
       "name": "@info",
       "scopes": [
         "inputValidation.infoBackground"
+      ]
+    },
+    {
+      "alpha": "22",
+      "name": "@info",
+      "scopes": [
+        "errorLens.infoBackground",
+        "errorLens.infoBackgroundLight",
+        "errorLens.infoMessageBackground",
+        "errorLens.infoRangeBackground"
       ]
     },
     {
@@ -94,10 +114,24 @@
       ]
     },
     {
-      "alpha": "88",
+      "alpha": "77",
       "name": "@warn",
       "scopes": [
         "inputValidation.warningBackground"
+      ]
+    },
+    {
+      "alpha": "22",
+      "name": "@warn",
+      "scopes": [
+        "errorLens.hintBackground",
+        "errorLens.hintBackgroundLight",
+        "errorLens.hintMessageBackground",
+        "errorLens.hintRangeBackground",
+        "errorLens.warningBackground",
+        "errorLens.warningBackgroundLight",
+        "errorLens.warningMessageBackground",
+        "errorLens.warningRangeBackground"
       ]
     },
     {
@@ -279,22 +313,6 @@
         "editorGroup.border",
         "editorHoverWidget.border",
         "editorOverviewRuler.border",
-        "errorLens.errorBackground",
-        "errorLens.errorBackgroundLight",
-        "errorLens.errorMessageBackground",
-        "errorLens.errorRangeBackground",
-        "errorLens.hintBackground",
-        "errorLens.hintBackgroundLight",
-        "errorLens.hintMessageBackground",
-        "errorLens.hintRangeBackground",
-        "errorLens.infoBackground",
-        "errorLens.infoBackgroundLight",
-        "errorLens.infoMessageBackground",
-        "errorLens.infoRangeBackground",
-        "errorLens.warningBackground",
-        "errorLens.warningBackgroundLight",
-        "errorLens.warningMessageBackground",
-        "errorLens.warningRangeBackground",
         "focusBorder",
         "inlineChat.border",
         "inlineChat.shadow",
@@ -533,8 +551,6 @@
           "keyword.other.special-method.ruby",
           "markup.quote.markdown",
           "meta.function-call.generic.python",
-          "punctuation.definition.string.begin.markdown",
-          "punctuation.definition.string.end.markdown",
           "support.function",
           "support.variable.property.dom.js",
           "support.variable.property.dom.ts",
@@ -549,9 +565,7 @@
           "markup.underline.link.markdown",
           "meta.object-literal.key.js",
           "meta.object-literal.key.ts",
-          "support.constant.parity.css",
-          "support.type.property-name.css",
-          "support.type.property-name.media.css"
+          "support.constant.parity.css"
         ]
       },
       {
@@ -616,18 +630,19 @@
           "keyword.var.go",
           "markup.italic.markdown",
           "meta.tag.sgml.doctype.html",
-          "punctuation.definition.block.tag.jsdoc",
-          "punctuation.definition.directive",
-          "punctuation.definition.italic.markdown",
-          "punctuation.definition.keyword",
-          "punctuation.definition.storage.type.objc",
-          "punctuation.support.type.property-name.begin.json",
-          "punctuation.support.type.property-name.end.json",
           "storage.type",
           "storage.type.annotation.java",
           "storage.type.java",
           "support.constant.math",
-          "support.type.property-name.json"
+          "support.type.builtin.graphql",
+          "support.type.graphql",
+          "support.type.object.module.js",
+          "support.type.primitive.ts",
+          "support.type.property-name",
+          "support.type.property-name.css",
+          "support.type.property-name.json",
+          "support.type.property-name.media.css",
+          "support.type.python"
         ]
       },
       {
@@ -656,22 +671,6 @@
           "meta.parameters.js",
           "meta.property-name.css",
           "meta.property-value.css",
-          "punctuation.definition.bracket.curly.begin.jsdoc",
-          "punctuation.definition.bracket.curly.end.jsdoc",
-          "punctuation.definition.constant.css",
-          "punctuation.definition.dictionary",
-          "punctuation.definition.variable.less",
-          "punctuation.section.function.begin.bracket.round.css",
-          "punctuation.section.function.end.bracket.round.css",
-          "punctuation.section.media.begin.bracket.curly.css",
-          "punctuation.section.media.end.bracket.curly.css",
-          "punctuation.section.property-list.begin.bracket.curly.css",
-          "punctuation.section.property-list.begin.bracket.curly.scss",
-          "punctuation.section.property-list.end.bracket.curly.css",
-          "punctuation.section.property-list.end.bracket.curly.scss",
-          "punctuation.separator.comma.js",
-          "punctuation.separator.dictionary.pair",
-          "punctuation.separator.list.comma.css",
           "source",
           "string.other.link.description.title.markdown",
           "support.constant.color",
@@ -689,17 +688,47 @@
         "scope": [
           "meta.brace",
           "meta.group.regexp",
-          "punctuation",
           "source.js-ignored-vscode",
           "string.regexp.js",
-          "support.constant",
-          "support.type.object.module.js"
+          "support.constant"
         ]
       },
       {
         "alpha": "aa",
         "scope": [
-          "punctuation.separator.key-value"
+          "punctuation",
+          "punctuation.definition.block.tag.jsdoc",
+          "punctuation.definition.bold.markdown",
+          "punctuation.definition.bracket.curly.begin.jsdoc",
+          "punctuation.definition.bracket.curly.end.jsdoc",
+          "punctuation.definition.comment",
+          "punctuation.definition.constant.css",
+          "punctuation.definition.dictionary",
+          "punctuation.definition.directive",
+          "punctuation.definition.heading.markdown",
+          "punctuation.definition.interpolation.begin.bracket.curly.scss",
+          "punctuation.definition.interpolation.end.bracket.curly.scss",
+          "punctuation.definition.italic.markdown",
+          "punctuation.definition.keyword",
+          "punctuation.definition.metadata.markdown",
+          "punctuation.definition.storage.type.objc",
+          "punctuation.definition.string.begin.markdown",
+          "punctuation.definition.string.end.markdown",
+          "punctuation.definition.variable.less",
+          "punctuation.section.function.begin.bracket.round.css",
+          "punctuation.section.function.end.bracket.round.css",
+          "punctuation.section.media.begin.bracket.curly.css",
+          "punctuation.section.media.end.bracket.curly.css",
+          "punctuation.section.property-list.begin.bracket.curly.css",
+          "punctuation.section.property-list.begin.bracket.curly.scss",
+          "punctuation.section.property-list.end.bracket.curly.css",
+          "punctuation.section.property-list.end.bracket.curly.scss",
+          "punctuation.separator.comma.js",
+          "punctuation.separator.dictionary.pair",
+          "punctuation.separator.key-value",
+          "punctuation.separator.list.comma.css",
+          "punctuation.support.type.property-name.begin.json",
+          "punctuation.support.type.property-name.end.json"
         ]
       },
       {
@@ -707,7 +736,6 @@
         "fontStyle": "italic",
         "scope": [
           "comment",
-          "punctuation.definition.comment",
           "string.quoted.docstring.multi.python"
         ]
       }
@@ -728,8 +756,6 @@
           "support.constant.property-value.css",
           "support.constant.property-value.scss",
           "support.constant.property.math",
-          "support.type.graphql",
-          "support.type.primitive.ts",
           "support.variable.dom.js",
           "support.variable.dom.ts",
           "support.variable.dom.tsx",
@@ -748,9 +774,6 @@
       },
       {
         "scope": [
-          "punctuation.definition.interpolation.begin.bracket.curly.scss",
-          "punctuation.definition.interpolation.end.bracket.curly.scss",
-          "punctuation.definition.metadata.markdown",
           "variable.language.special.self.python",
           "variable.language.super",
           "variable.language.this.js",
@@ -761,21 +784,17 @@
         "scope": [
           "entity.name.section.markdown",
           "meta.object-literal.key",
-          "punctuation.definition.heading.markdown",
           "source.coffee.embedded.source",
           "string.interpolated.jade",
           "string.quoted",
           "string.template.js",
-          "string.unquoted.plain.out.yaml",
-          "support.type.builtin.graphql",
-          "support.type.property-name"
+          "string.unquoted.plain.out.yaml"
         ]
       },
       {
         "fontStyle": "bold",
         "scope": [
-          "markup.bold.markdown",
-          "punctuation.definition.bold.markdown"
+          "markup.bold.markdown"
         ]
       }
     ]
