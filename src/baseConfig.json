@@ -1,6 +1,13 @@
 {
   "colors": [
     {
+      "name": "$debug",
+      "scopes": [
+        "commandCenter.debuggingBackground",
+        "statusBar.debuggingBackground"
+      ]
+    },
+    {
       "alpha": "dd",
       "name": "$find",
       "scopes": [
@@ -23,6 +30,12 @@
       ]
     },
     {
+      "name": "$noFolder",
+      "scopes": [
+        "statusBar.noFolderBackground"
+      ]
+    },
+    {
       "name": "@fail",
       "scopes": [
         "editorError.foreground",
@@ -37,12 +50,26 @@
       ]
     },
     {
+      "alpha": "88",
+      "name": "@fail",
+      "scopes": [
+        "inputValidation.errorBackground"
+      ]
+    },
+    {
       "name": "@info",
       "scopes": [
         "editorInfo.foreground",
         "errorLens.infoForeground",
         "errorLens.infoForegroundLight",
         "minimap.infoHighlight"
+      ]
+    },
+    {
+      "alpha": "88",
+      "name": "@info",
+      "scopes": [
+        "inputValidation.infoBackground"
       ]
     },
     {
@@ -64,6 +91,13 @@
         "minimap.warningHighlight",
         "minimap.hintHighlight",
         "gitDecoration.modifiedResourceForeground"
+      ]
+    },
+    {
+      "alpha": "88",
+      "name": "@warn",
+      "scopes": [
+        "inputValidation.warningBackground"
       ]
     },
     {
@@ -165,8 +199,17 @@
     {
       "name": "blue",
       "scopes": [
+        "editorBracketHighlight.foreground3",
+        "textLink.foreground",
         "terminal.ansiBlue",
         "terminal.ansiBrightBlue"
+      ]
+    },
+    {
+      "alpha": "77",
+      "name": "blue",
+      "scopes": [
+        "textBlockQuote.border"
       ]
     },
     {
@@ -179,6 +222,7 @@
     {
       "name": "green",
       "scopes": [
+        "charts.green",
         "terminal.ansiGreen",
         "terminal.ansiBrightGreen"
       ]
@@ -193,6 +237,8 @@
     {
       "name": "pink",
       "scopes": [
+        "charts.red",
+        "editorBracketHighlight.foreground2",
         "terminal.ansiBrightMagenta",
         "terminal.ansiBrightRed",
         "terminal.ansiMagenta",
@@ -207,12 +253,32 @@
       ]
     },
     {
+      "name": "purple",
+      "scopes": [
+        "charts.purple"
+      ]
+    },
+    {
       "name": "transparent",
       "scopes": [
+        "activityBar.dropBorder",
+        "activityBarTop.activeBorder",
+        "activityBarTop.dropBorder",
+        "chat.requestBorder",
         "commandCenter.activeBorder",
         "commandCenter.border",
         "commandCenter.inactiveBorder",
+        "debugExceptionWidget.border",
+        "diffEditor.move.border",
+        "dropdown.border",
+        "editor.lineHighlightBorder",
+        "editor.snippetFinalTabstopHighlightBorder",
         "editorBracketMatch.border",
+        "editorCommentsWidget.resolvedBorder",
+        "editorCommentsWidget.unresolvedBorder",
+        "editorGroup.border",
+        "editorHoverWidget.border",
+        "editorOverviewRuler.border",
         "errorLens.errorBackground",
         "errorLens.errorBackgroundLight",
         "errorLens.errorMessageBackground",
@@ -230,21 +296,63 @@
         "errorLens.warningMessageBackground",
         "errorLens.warningRangeBackground",
         "focusBorder",
+        "inlineChat.border",
         "inlineChat.shadow",
+        "inlineChatInput.border",
+        "inlineChatInput.focusBorder",
+        "inputOption.activeBorder",
+        "inputValidation.errorBorder",
+        "inputValidation.infoBorder",
+        "inputValidation.warningBorder",
+        "interactive.inactiveCodeBorder",
+        "keybindingLabel.border",
+        "keybindingLabel.bottomBorder",
         "list.dropBackground",
         "listFilterWidget.shadow",
         "menu.selectionBorder",
+        "mergeEditor.conflict.handledFocused.border",
+        "mergeEditor.conflict.handledUnfocused.border",
+        "mergeEditor.conflict.unhandledFocused.border",
+        "mergeEditor.conflict.unhandledUnfocused.border",
+        "notebook.cellBorderColor",
+        "notebook.focusedCellBorder",
+        "notebook.focusedEditorBorder",
+        "notifications.border",
         "panel.border",
+        "panel.dropBorder",
+        "panelSection.border",
         "panelSection.dropBackground",
+        "scm.historyItemSelectedStatisticsBorder",
+        "scm.historyItemStatisticsBorder",
         "scrollbar.shadow",
+        "settings.dropdownBorder",
+        "settings.dropdownListBorder",
         "sideBar.border",
         "sideBar.dropBackground",
+        "simpleFindWidget.sashBorder",
         "statusBar.border",
         "statusBar.focusBorder",
+        "statusBarItem.focusBorder",
+        "statusBarItem.hoverBackground",
+        "statusBarItem.compactHoverBackground",
+        "statusBarItem.remoteBackground",
+        "statusBarItem.remoteHoverBackground",
         "tab.activeBorder",
+        "tab.activeModifiedBorder",
         "tab.border",
+        "tab.dragAndDropBorder",
+        "tab.inactiveModifiedBorder",
+        "tab.lastPinnedBorder",
+        "tab.unfocusedActiveBorder",
+        "tab.unfocusedActiveModifiedBorder",
+        "tab.unfocusedInactiveModifiedBorder",
         "terminal.dropBackground",
+        "testing.coveredBorder",
+        "testing.messagePeekBorder",
+        "testing.peekBorder",
+        "testing.uncoveredBorder",
         "titleBar.border",
+        "welcomePage.tileBorder",
         "widget.shadow",
         "window.inactiveBorder"
       ]
@@ -252,6 +360,8 @@
     {
       "name": "white",
       "scopes": [
+        "statusBarItem.hoverForeground",
+        "statusBarItem.remoteHoverForeground",
         "terminal.ansiBrightWhite",
         "terminal.ansiWhite"
       ]
@@ -272,7 +382,6 @@
         "editor.findMatchForeground",
         "editor.findMatchHighlightForeground",
         "input.foreground",
-        "statusBarItem.hoverForeground",
         "tab.activeForeground",
         "list.activeSelectionForeground",
         "list.highlightForeground",
@@ -300,6 +409,7 @@
       "name": "white",
       "scopes": [
         "list.inactiveSelectionForeground",
+        "editorActiveLineNumber.foreground",
         "errorLens.statusBarErrorForeground",
         "errorLens.statusBarHintForeground",
         "errorLens.statusBarIconErrorForeground",
@@ -309,11 +419,18 @@
       ]
     },
     {
+      "alpha": "aa",
+      "name": "white",
+      "scopes": [
+        "statusBar.foreground",
+        "statusBarItem.remoteForeground"
+      ]
+    },
+    {
       "alpha": "77",
       "name": "white",
       "scopes": [
         "sideBarSectionHeader.foreground",
-        "statusBar.foreground",
         "terminal.ansiBrightBlack"
       ]
     },
@@ -340,7 +457,9 @@
       "scopes": [
         "activityBar.inactiveForeground",
         "list.inactiveSelectionBackground",
-        "editorOverviewRuler.findMatchForeground"
+        "editorOverviewRuler.findMatchForeground",
+        "sideBySideEditor.horizontalBorder",
+        "sideBySideEditor.verticalBorder"
       ]
     },
     {
@@ -363,13 +482,17 @@
       "alpha": "11",
       "name": "white",
       "scopes": [
-        "editorBracketMatch.background",
-        "statusBarItem.hoverBackground"
+        "editorBracketMatch.background"
       ]
     },
     {
       "name": "yellow",
       "scopes": [
+        "charts.orange",
+        "charts.yellow",
+        "diffEditor.moveActive.border",
+        "editorBracketHighlight.foreground1",
+        "editorUnicodeHighlight.border",
         "terminal.ansiBrightYellow",
         "terminal.ansiYellow"
       ]
