@@ -32,6 +32,7 @@ def main() -> None:
     event_handler = FileChangeHandler(build_main)
     observer = Observer()
     observer.schedule(event_handler, path=DEV_DIRPATH, recursive=True)
+    observer.schedule(event_handler, path="src", recursive=True)
     observer.start()
 
     try:

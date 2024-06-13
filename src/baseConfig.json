@@ -11,8 +11,7 @@
       "alpha": "dd",
       "name": "$find",
       "scopes": [
-        "minimap.findMatchHighlight",
-        "minimap.selectionHighlight"
+        "minimap.findMatchHighlight"
       ]
     },
     {
@@ -108,9 +107,15 @@
         "errorLens.warningForeground",
         "errorLens.warningForegroundLight",
         "list.warningForeground",
-        "minimap.warningHighlight",
-        "minimap.hintHighlight",
         "gitDecoration.modifiedResourceForeground"
+      ]
+    },
+    {
+      "alpha": "77",
+      "name": "@warn",
+      "scopes": [
+        "minimap.hintHighlight",
+        "minimap.warningHighlight"
       ]
     },
     {
@@ -186,6 +191,16 @@
         "panelTitle.activeBorder",
         "pickerGroup.border",
         "pickerGroup.foreground"
+      ]
+    },
+    {
+      "alpha": "33",
+      "name": "accentColor",
+      "scopes": [
+        "editor.selectionBackground",
+        "editor.selectionHighlightBackground",
+        "minimap.selectionHighlight",
+        "minimap.selectionOccurrenceHighlight"
       ]
     },
     {
@@ -485,8 +500,6 @@
       "name": "white",
       "scopes": [
         "button.secondaryBackground",
-        "editor.selectionBackground",
-        "editor.selectionHighlightBackground",
         "editorIndentGuide.background1",
         "editorIndentGuide.background2",
         "editorIndentGuide.background3",
