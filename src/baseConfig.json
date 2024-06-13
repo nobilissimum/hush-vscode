@@ -38,14 +38,36 @@
       "name": "@fail",
       "scopes": [
         "editorError.foreground",
+        "editorGutter.deletedBackground",
         "errorForeground",
         "errorLens.errorForeground",
+        "gitlens.unpulledChangesIconColor",
         "errorLens.errorForegroundLight",
         "gitDecoration.conflictingResourceForeground",
         "gitDecoration.deletedResourceForeground",
+        "diffEditorGutter.removedLineBackground",
+        "gitlens.graphChangesColumnDeletedColor",
+        "gitlens.decorations.worktreeMissingForegroundColor",
         "list.errorForeground",
+        "gitlens.closedPullRequestIconColor",
+        "gitlens.launchpadIndicatorBlockedColor",
+        "gitlens.launchpadIndicatorBlockedHoverColor",
+        "gitlens.decorations.statusMergingOrRebasingConflictForegroundColor",
         "list.invalidItemForeground",
-        "minimap.errorHighlight"
+        "gitlens.decorations.deletedForegroundColor",
+        "gitlens.decorations.branchBehindForegroundColor",
+        "gitlens.decorations.branchMissingUpstreamForegroundColor",
+        "minimap.errorHighlight",
+        "gitDecoration.stageDeletedResourceForeground",
+        "minimapGutter.deletedBackground"
+      ]
+    },
+    {
+      "alpha": "99",
+      "name": "@fail",
+      "scopes": [
+        "editorOverviewRuler.deletedForeground",
+        "editorOverviewRuler.errorForeground"
       ]
     },
     {
@@ -69,9 +91,33 @@
       "name": "@info",
       "scopes": [
         "editorInfo.foreground",
+        "settings.modifiedItemIndicator",
+        "editorGutter.commentRangeForeground",
+        "editorGutter.modifiedBackground",
         "errorLens.infoForeground",
+        "gitlens.graphScrollMarkerLocalBranchesColor",
+        "gitlens.graphScrollMarkerRemoteBranchesColor",
         "errorLens.infoForegroundLight",
-        "minimap.infoHighlight"
+        "gitDecoration.modifiedResourceForeground",
+        "gitlens.graphMinimapMarkerLocalBranchesColor",
+        "gitlens.graphMinimapMarkerRemoteBranchesColor",
+        "gitDecoration.stageModifiedResourceForeground",
+        "gitDecoration.submoduleResourceForeground",
+        "gitlens.decorations.modifiedForegroundColor",
+        "minimap.infoHighlight",
+        "minimapGutter.modifiedBackground"
+      ]
+    },
+    {
+      "alpha": "99",
+      "name": "@info",
+      "scopes": [
+        "editorOverviewRuler.modifiedForeground",
+        "gitlens.gutterUncommittedForegroundColor",
+        "editorOverviewRuler.incomingContentForeground",
+        "gitlens.lineHighlightOverviewRulerColor",
+        "editorOverviewRuler.infoForeground",
+        "editorOverviewRuler.rangeHighlightForeground"
       ]
     },
     {
@@ -87,6 +133,7 @@
       "scopes": [
         "errorLens.infoBackground",
         "errorLens.infoBackgroundLight",
+        "gitlens.lineHighlightBackgroundColor",
         "errorLens.infoMessageBackground",
         "errorLens.infoRangeBackground"
       ]
@@ -94,7 +141,37 @@
     {
       "name": "@success",
       "scopes": [
-        "gitDecoration.untrackedResourceForeground"
+        "editorGutter.addedBackground",
+        "gitlens.openAutolinkedIssueIconColor",
+        "gitlens.openPullRequestIconColor",
+        "gitlens.unpublishedChangesIconColor",
+        "gitlens.unpublishedCommitIconColor",
+        "gitlens.graphChangesColumnAddedColor",
+        "gitlens.launchpadIndicatorMergeableHoverColor",
+        "gitlens.launchpadIndicatorMergeableColor",
+        "gitlens.graphScrollMarkerUpstreamColor",
+        "gitDecoration.untrackedResourceForeground",
+        "diffEditorGutter.insertedLineBackground",
+        "gitDecoration.addedResourceForeground",
+        "gitDecoration.renamedResourceForeground",
+        "gitlens.decorations.renamedForegroundColor",
+        "gitlens.decorations.branchUnpublishedForegroundColor",
+        "gitlens.graphScrollMarkerHighlightsColor",
+        "gitlens.graphMinimapMarkerUpstreamColor",
+        "gitlens.graphScrollMarkerHeadColor",
+        "gitlens.decorations.copiedForegroundColor",
+        "gitlens.decorations.addedForegroundColor",
+        "gitlens.decorations.branchAheadForegroundColor",
+        "gitlens.decorations.workspaceRepoOpenForegroundColor",
+        "gitlens.decorations.worktreeHasUncommittedChangesForegroundColor",
+        "minimapGutter.addedBackground"
+      ]
+    },
+    {
+      "alpha": "99",
+      "name": "@success",
+      "scopes": [
+        "editorOverviewRuler.addedForeground"
       ]
     },
     {
@@ -103,11 +180,27 @@
         "editorHint.foreground",
         "editorWarning.foreground",
         "errorLens.hintForeground",
+        "gitlens.decorations.statusMergingOrRebasingForegroundColor",
+        "gitlens.launchpadIndicatorAttentionColor",
+        "gitlens.launchpadIndicatorAttentionHoverColor",
         "errorLens.hintForegroundLight",
+        "gitlens.decorations.untrackedForegroundColor",
+        "gitlens.decorations.workspaceCurrentForegroundColor",
+        "gitlens.graphScrollMarkerTagsColor",
         "errorLens.warningForeground",
         "errorLens.warningForegroundLight",
-        "list.warningForeground",
-        "gitDecoration.modifiedResourceForeground"
+        "gitlens.graphMinimapMarkerHighlightsColor",
+        "gitlens.graphMinimapMarkerTagsColor",
+        "gitlens.graphMinimapMarkerHeadColor",
+        "gitlens.decorations.branchDivergedForegroundColor",
+        "list.warningForeground"
+      ]
+    },
+    {
+      "alpha": "99",
+      "name": "@warn",
+      "scopes": [
+        "editorOverviewRuler.warningForeground"
       ]
     },
     {
@@ -304,7 +397,11 @@
     {
       "name": "purple",
       "scopes": [
-        "charts.purple"
+        "charts.purple",
+        "gitlens.closedAutolinkedIssueIconColor",
+        "gitlens.graphScrollMarkerStashesColor",
+        "gitlens.graphMinimapMarkerStashesColor",
+        "gitlens.mergedPullRequestIconColor"
       ]
     },
     {
@@ -442,7 +539,7 @@
       "name": "white",
       "scopes": [
         "list.inactiveSelectionForeground",
-        "editorActiveLineNumber.foreground",
+        "editorLineNumber.activeForeground",
         "errorLens.statusBarErrorForeground",
         "errorLens.statusBarHintForeground",
         "errorLens.statusBarIconErrorForeground",
@@ -457,6 +554,13 @@
       "scopes": [
         "statusBar.foreground",
         "statusBarItem.remoteForeground"
+      ]
+    },
+    {
+      "alpha": "99",
+      "name": "white",
+      "scopes": [
+        "gitlens.decorations.workspaceRepoMissingForegroundColor"
       ]
     },
     {
