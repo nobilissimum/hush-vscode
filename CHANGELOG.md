@@ -14,6 +14,14 @@ All notable changes to the **hush** extension will be documented in this file.
 
 **Full Changelog**: https://github.com/nobilissimum/hush-vscode/commits/v1.2.0
 
+## [1.0.2] - 2024-03-10
+
+### Other Changes
+
+- Fix visually unclear colors by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/1
+
+**Full Changelog**: https://github.com/nobilissimum/hush-vscode/commits/v1.0.2
+
 ## [1.0.1] - 2024-06-10
 
 ### Changes
