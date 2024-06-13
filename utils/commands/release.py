@@ -3,7 +3,7 @@ import json
 from os import scandir
 from pathlib import Path
 
-from utils.const import (
+from utils.settings import (
     DEFAULT_THEME_MODE,
     DIST_THEMES_DIRPATH,
     NODE_PACKAGE_PATH,

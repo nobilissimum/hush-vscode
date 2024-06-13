@@ -4,7 +4,7 @@ import logging
 from logging import Logger
 from pathlib import Path
 
-from utils.const import HIDDEN_COLORS_PATH, INDENTATION, SRC_BASE_CONFIG_PATH
+from utils.settings import HIDDEN_COLORS_PATH, INDENTATION, SRC_BASE_CONFIG_PATH
 
 logger: Logger = logging.getLogger()
 
