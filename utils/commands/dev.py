@@ -51,8 +51,15 @@ class FileChangeHandler(FileSystemEventHandler):
         self.callback()
 
 
+def file_handler_callback() -> None:
+    try:
+        build_main()
+    except Exception:
+        logger.exception("Failed to build theme")
+
+
 def main() -> None:
-    event_handler = FileChangeHandler(build_main)
+    event_handler = FileChangeHandler(file_handler_callback)
     observer = Observer()
 
     for directory in WATCH_DIRS:
