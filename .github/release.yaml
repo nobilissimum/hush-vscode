@@ -8,7 +8,7 @@ changelog:
         - enhancement-major
     - title: Minor Enhancements 💄
       labels:
-        - enhancement-major
+        - enhancement-minor
     - title: Bug fixes 🔨
       labels:
         - bug

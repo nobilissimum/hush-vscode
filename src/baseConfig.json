@@ -1,74 +1,177 @@
 {
-  "colors": [
-    {
-      "alpha": "dd",
-      "name": "$find",
-      "scopes": [
-        "minimap.findMatchHighlight",
-        "minimap.selectionHighlight"
+  "colors": {
+    "$debug": {
+      "$": [
+        "commandCenter.debuggingBackground",
+        "statusBar.debuggingBackground"
       ]
     },
-    {
-      "alpha": "77",
-      "name": "$find",
-      "scopes": [
-        "editor.findMatchBackground"
-      ]
-    },
-    {
-      "alpha": "44",
-      "name": "$find",
-      "scopes": [
+    "$find": {
+      "44": [
         "editor.findMatchHighlightBackground"
+      ],
+      "77": [
+        "editor.findMatchBackground"
+      ],
+      "dd": [
+        "minimap.findMatchHighlight"
       ]
     },
-    {
-      "name": "@fail",
-      "scopes": [
+    "$noFolder": {
+      "$": [
+        "statusBar.noFolderBackground"
+      ]
+    },
+    "@fail": {
+      "22": [
+        "errorLens.errorBackground",
+        "errorLens.errorBackgroundLight",
+        "errorLens.errorMessageBackground",
+        "errorLens.errorRangeBackground"
+      ],
+      "77": [
+        "inputValidation.errorBackground"
+      ],
+      "99": [
+        "editorOverviewRuler.deletedForeground",
+        "editorOverviewRuler.errorForeground"
+      ],
+      "$": [
+        "diffEditorGutter.removedLineBackground",
         "editorError.foreground",
+        "editorGutter.deletedBackground",
         "errorForeground",
         "errorLens.errorForeground",
         "errorLens.errorForegroundLight",
         "gitDecoration.conflictingResourceForeground",
         "gitDecoration.deletedResourceForeground",
+        "gitDecoration.stageDeletedResourceForeground",
+        "gitlens.closedPullRequestIconColor",
+        "gitlens.decorations.branchBehindForegroundColor",
+        "gitlens.decorations.branchMissingUpstreamForegroundColor",
+        "gitlens.decorations.deletedForegroundColor",
+        "gitlens.decorations.statusMergingOrRebasingConflictForegroundColor",
+        "gitlens.decorations.worktreeMissingForegroundColor",
+        "gitlens.graphChangesColumnDeletedColor",
+        "gitlens.launchpadIndicatorBlockedColor",
+        "gitlens.launchpadIndicatorBlockedHoverColor",
+        "gitlens.unpulledChangesIconColor",
         "list.errorForeground",
         "list.invalidItemForeground",
-        "minimap.errorHighlight"
+        "minimap.errorHighlight",
+        "minimapGutter.deletedBackground"
       ]
     },
-    {
-      "name": "@info",
-      "scopes": [
+    "@info": {
+      "22": [
+        "errorLens.infoBackground",
+        "errorLens.infoBackgroundLight",
+        "errorLens.infoMessageBackground",
+        "errorLens.infoRangeBackground",
+        "gitlens.lineHighlightBackgroundColor"
+      ],
+      "77": [
+        "inputValidation.infoBackground"
+      ],
+      "99": [
+        "editorOverviewRuler.incomingContentForeground",
+        "editorOverviewRuler.infoForeground",
+        "editorOverviewRuler.modifiedForeground",
+        "editorOverviewRuler.rangeHighlightForeground",
+        "gitlens.gutterUncommittedForegroundColor",
+        "gitlens.lineHighlightOverviewRulerColor"
+      ],
+      "$": [
+        "editorGutter.commentRangeForeground",
+        "editorGutter.modifiedBackground",
         "editorInfo.foreground",
         "errorLens.infoForeground",
         "errorLens.infoForegroundLight",
-        "minimap.infoHighlight"
+        "gitDecoration.modifiedResourceForeground",
+        "gitDecoration.stageModifiedResourceForeground",
+        "gitDecoration.submoduleResourceForeground",
+        "gitlens.decorations.modifiedForegroundColor",
+        "gitlens.graphMinimapMarkerLocalBranchesColor",
+        "gitlens.graphMinimapMarkerRemoteBranchesColor",
+        "gitlens.graphScrollMarkerLocalBranchesColor",
+        "gitlens.graphScrollMarkerRemoteBranchesColor",
+        "minimap.infoHighlight",
+        "minimapGutter.modifiedBackground",
+        "settings.modifiedItemIndicator"
       ]
     },
-    {
-      "name": "@success",
-      "scopes": [
-        "gitDecoration.untrackedResourceForeground"
+    "@success": {
+      "99": [
+        "editorOverviewRuler.addedForeground"
+      ],
+      "$": [
+        "diffEditorGutter.insertedLineBackground",
+        "editorGutter.addedBackground",
+        "gitDecoration.addedResourceForeground",
+        "gitDecoration.renamedResourceForeground",
+        "gitDecoration.untrackedResourceForeground",
+        "gitlens.decorations.addedForegroundColor",
+        "gitlens.decorations.branchAheadForegroundColor",
+        "gitlens.decorations.branchUnpublishedForegroundColor",
+        "gitlens.decorations.copiedForegroundColor",
+        "gitlens.decorations.renamedForegroundColor",
+        "gitlens.decorations.workspaceRepoOpenForegroundColor",
+        "gitlens.decorations.worktreeHasUncommittedChangesForegroundColor",
+        "gitlens.graphChangesColumnAddedColor",
+        "gitlens.graphMinimapMarkerUpstreamColor",
+        "gitlens.graphScrollMarkerHeadColor",
+        "gitlens.graphScrollMarkerHighlightsColor",
+        "gitlens.graphScrollMarkerUpstreamColor",
+        "gitlens.launchpadIndicatorMergeableColor",
+        "gitlens.launchpadIndicatorMergeableHoverColor",
+        "gitlens.openAutolinkedIssueIconColor",
+        "gitlens.openPullRequestIconColor",
+        "gitlens.unpublishedChangesIconColor",
+        "gitlens.unpublishedCommitIconColor",
+        "minimapGutter.addedBackground"
       ]
     },
-    {
-      "name": "@warn",
-      "scopes": [
+    "@warn": {
+      "22": [
+        "errorLens.hintBackground",
+        "errorLens.hintBackgroundLight",
+        "errorLens.hintMessageBackground",
+        "errorLens.hintRangeBackground",
+        "errorLens.warningBackground",
+        "errorLens.warningBackgroundLight",
+        "errorLens.warningMessageBackground",
+        "errorLens.warningRangeBackground"
+      ],
+      "77": [
+        "inputValidation.warningBackground",
+        "minimap.hintHighlight",
+        "minimap.warningHighlight"
+      ],
+      "99": [
+        "editorOverviewRuler.warningForeground"
+      ],
+      "$": [
         "editorHint.foreground",
         "editorWarning.foreground",
         "errorLens.hintForeground",
         "errorLens.hintForegroundLight",
         "errorLens.warningForeground",
         "errorLens.warningForegroundLight",
-        "list.warningForeground",
-        "minimap.warningHighlight",
-        "minimap.hintHighlight",
-        "gitDecoration.modifiedResourceForeground"
+        "gitlens.decorations.branchDivergedForegroundColor",
+        "gitlens.decorations.statusMergingOrRebasingForegroundColor",
+        "gitlens.decorations.untrackedForegroundColor",
+        "gitlens.decorations.workspaceCurrentForegroundColor",
+        "gitlens.graphMinimapMarkerHeadColor",
+        "gitlens.graphMinimapMarkerHighlightsColor",
+        "gitlens.graphMinimapMarkerTagsColor",
+        "gitlens.graphScrollMarkerTagsColor",
+        "gitlens.launchpadIndicatorAttentionColor",
+        "gitlens.launchpadIndicatorAttentionHoverColor",
+        "list.warningForeground"
       ]
     },
-    {
-      "name": "_dark",
-      "scopes": [
+    "_dark": {
+      "$": [
         "activityBar.background",
         "debugToolBar.background",
         "dropdown.background",
@@ -87,16 +190,14 @@
         "titleBar.inactiveBackground"
       ]
     },
-    {
-      "name": "_light",
-      "scopes": [
+    "_light": {
+      "$": [
         "editor.background",
         "tab.activeBackground"
       ]
     },
-    {
-      "name": "_main",
-      "scopes": [
+    "_main": {
+      "$": [
         "editorGroupHeader.tabsBackground",
         "editorWidget.background",
         "peekViewEditor.background",
@@ -104,9 +205,14 @@
         "tab.inactiveBackground"
       ]
     },
-    {
-      "name": "accentColor",
-      "scopes": [
+    "accentColor": {
+      "33": [
+        "editor.selectionBackground",
+        "editor.selectionHighlightBackground",
+        "minimap.selectionHighlight",
+        "minimap.selectionOccurrenceHighlight"
+      ],
+      "$": [
         "activityBar.activeBorder",
         "activityBarBadge.background",
         "badge.background",
@@ -120,207 +226,184 @@
         "pickerGroup.foreground"
       ]
     },
-    {
-      "name": "black",
-      "scopes": [
-        "terminal.ansiBlack"
-      ]
-    },
-    {
-      "alpha": "88",
-      "name": "black",
-      "scopes": [
-        "scrollbarSlider.activeBackground"
-      ]
-    },
-    {
-      "alpha": "66",
-      "name": "black",
-      "scopes": [
-        "scrollbarSlider.background",
-        "scrollbarSlider.hoverBackground"
-      ]
-    },
-    {
-      "alpha": "33",
-      "name": "black",
-      "scopes": [
-        "list.hoverBackground",
-        "menu.border",
-        "menu.separatorBackground",
-        "minimapSlider.activeBackground"
-      ]
-    },
-    {
-      "alpha": "22",
-      "name": "black",
-      "scopes": [
+    "black": {
+      "22": [
         "editor.findRangeHighlightBackground",
         "editor.lineHighlightBackground",
         "editor.rangeHighlightBackground",
         "minimapSlider.background",
         "minimapSlider.hoverBackground"
+      ],
+      "33": [
+        "list.hoverBackground",
+        "menu.border",
+        "menu.separatorBackground",
+        "minimapSlider.activeBackground"
+      ],
+      "66": [
+        "scrollbarSlider.background",
+        "scrollbarSlider.hoverBackground"
+      ],
+      "88": [
+        "scrollbarSlider.activeBackground"
+      ],
+      "$": [
+        "terminal.ansiBlack"
       ]
     },
-    {
-      "name": "blue",
-      "scopes": [
+    "blue": {
+      "77": [
+        "textBlockQuote.border"
+      ],
+      "$": [
+        "editorBracketHighlight.foreground3",
+        "textLink.foreground",
         "terminal.ansiBlue",
         "terminal.ansiBrightBlue"
       ]
     },
-    {
-      "name": "cyan",
-      "scopes": [
+    "cyan": {
+      "$": [
         "terminal.ansiCyan",
         "terminal.ansiBrightCyan"
       ]
     },
-    {
-      "name": "green",
-      "scopes": [
+    "green": {
+      "$": [
+        "charts.green",
         "terminal.ansiGreen",
         "terminal.ansiBrightGreen"
-      ]
-    },
-    {
-      "alpha": "1a",
-      "name": "green",
-      "scopes": [
+      ],
+      "1a": [
         "diffEditor.insertedTextBackground"
       ]
     },
-    {
-      "name": "pink",
-      "scopes": [
+    "pink": {
+      "$": [
+        "charts.red",
+        "editorBracketHighlight.foreground2",
         "terminal.ansiBrightMagenta",
         "terminal.ansiBrightRed",
         "terminal.ansiMagenta",
         "terminal.ansiRed"
-      ]
-    },
-    {
-      "alpha": "1a",
-      "name": "pink",
-      "scopes": [
+      ],
+      "1a": [
         "diffEditor.removedTextBackground"
       ]
     },
-    {
-      "name": "transparent",
-      "scopes": [
+    "purple": {
+      "$": [
+        "charts.purple",
+        "gitlens.closedAutolinkedIssueIconColor",
+        "gitlens.graphScrollMarkerStashesColor",
+        "gitlens.graphMinimapMarkerStashesColor",
+        "gitlens.mergedPullRequestIconColor"
+      ]
+    },
+    "transparent": {
+      "$": [
+        "activityBar.dropBorder",
+        "activityBarTop.activeBorder",
+        "activityBarTop.dropBorder",
+        "chat.requestBorder",
         "commandCenter.activeBorder",
         "commandCenter.border",
         "commandCenter.inactiveBorder",
+        "debugExceptionWidget.border",
+        "diffEditor.move.border",
+        "dropdown.border",
+        "editor.lineHighlightBorder",
+        "editor.snippetFinalTabstopHighlightBorder",
         "editorBracketMatch.border",
-        "errorLens.errorBackground",
-        "errorLens.errorBackgroundLight",
-        "errorLens.errorMessageBackground",
-        "errorLens.errorRangeBackground",
-        "errorLens.hintBackground",
-        "errorLens.hintBackgroundLight",
-        "errorLens.hintMessageBackground",
-        "errorLens.hintRangeBackground",
-        "errorLens.infoBackground",
-        "errorLens.infoBackgroundLight",
-        "errorLens.infoMessageBackground",
-        "errorLens.infoRangeBackground",
-        "errorLens.warningBackground",
-        "errorLens.warningBackgroundLight",
-        "errorLens.warningMessageBackground",
-        "errorLens.warningRangeBackground",
+        "editorCommentsWidget.resolvedBorder",
+        "editorCommentsWidget.unresolvedBorder",
+        "editorGroup.border",
+        "editorHoverWidget.border",
+        "editorOverviewRuler.border",
         "focusBorder",
+        "inlineChat.border",
         "inlineChat.shadow",
+        "inlineChatInput.border",
+        "inlineChatInput.focusBorder",
+        "inputOption.activeBorder",
+        "inputValidation.errorBorder",
+        "inputValidation.infoBorder",
+        "inputValidation.warningBorder",
+        "interactive.inactiveCodeBorder",
+        "keybindingLabel.border",
+        "keybindingLabel.bottomBorder",
         "list.dropBackground",
         "listFilterWidget.shadow",
         "menu.selectionBorder",
+        "mergeEditor.conflict.handledFocused.border",
+        "mergeEditor.conflict.handledUnfocused.border",
+        "mergeEditor.conflict.unhandledFocused.border",
+        "mergeEditor.conflict.unhandledUnfocused.border",
+        "notebook.cellBorderColor",
+        "notebook.focusedCellBorder",
+        "notebook.focusedEditorBorder",
+        "notifications.border",
         "panel.border",
+        "panel.dropBorder",
+        "panelSection.border",
         "panelSection.dropBackground",
+        "scm.historyItemSelectedStatisticsBorder",
+        "scm.historyItemStatisticsBorder",
         "scrollbar.shadow",
+        "settings.dropdownBorder",
+        "settings.dropdownListBorder",
         "sideBar.border",
         "sideBar.dropBackground",
+        "simpleFindWidget.sashBorder",
         "statusBar.border",
         "statusBar.focusBorder",
+        "statusBarItem.compactHoverBackground",
+        "statusBarItem.focusBorder",
+        "statusBarItem.hoverBackground",
+        "statusBarItem.remoteBackground",
+        "statusBarItem.remoteHoverBackground",
         "tab.activeBorder",
+        "tab.activeModifiedBorder",
         "tab.border",
+        "tab.dragAndDropBorder",
+        "tab.inactiveModifiedBorder",
+        "tab.lastPinnedBorder",
+        "tab.unfocusedActiveBorder",
+        "tab.unfocusedActiveModifiedBorder",
+        "tab.unfocusedInactiveModifiedBorder",
         "terminal.dropBackground",
+        "testing.coveredBorder",
+        "testing.messagePeekBorder",
+        "testing.peekBorder",
+        "testing.uncoveredBorder",
         "titleBar.border",
+        "welcomePage.tileBorder",
         "widget.shadow",
         "window.inactiveBorder"
       ]
     },
-    {
-      "name": "white",
-      "scopes": [
-        "terminal.ansiBrightWhite",
-        "terminal.ansiWhite"
-      ]
-    },
-    {
-      "alpha": "ef",
-      "name": "white",
-      "scopes": [
-        "editorSuggestWidget.foreground",
-        "editorSuggestWidget.highlightForeground"
-      ]
-    },
-    {
-      "alpha": "ee",
-      "name": "white",
-      "scopes": [
-        "activityBar.foreground",
-        "editor.findMatchForeground",
-        "editor.findMatchHighlightForeground",
-        "input.foreground",
-        "statusBarItem.hoverForeground",
-        "tab.activeForeground",
-        "list.activeSelectionForeground",
-        "list.highlightForeground",
-        "list.hoverForeground",
-        "sideBar.foreground"
-      ]
-    },
-    {
-      "alpha": "d4",
-      "name": "white",
-      "scopes": [
-        "editor.foreground",
-        "terminal.foreground"
-      ]
-    },
-    {
-      "alpha": "bb",
-      "name": "white",
-      "scopes": [
-        "sideBarTitle.foreground"
-      ]
-    },
-    {
-      "alpha": "cc",
-      "name": "white",
-      "scopes": [
-        "list.inactiveSelectionForeground",
-        "errorLens.statusBarErrorForeground",
-        "errorLens.statusBarHintForeground",
-        "errorLens.statusBarIconErrorForeground",
-        "errorLens.statusBarIconWarningForeground",
-        "errorLens.statusBarInfoForeground",
-        "errorLens.statusBarWarningForeground"
-      ]
-    },
-    {
-      "alpha": "77",
-      "name": "white",
-      "scopes": [
-        "sideBarSectionHeader.foreground",
-        "statusBar.foreground",
-        "terminal.ansiBrightBlack"
-      ]
-    },
-    {
-      "alpha": "66",
-      "name": "white",
-      "scopes": [
+    "white": {
+      "11": [
+        "editorBracketMatch.background"
+      ],
+      "22": [
+        "button.secondaryBackground",
+        "editorIndentGuide.background1",
+        "editorIndentGuide.background2",
+        "editorIndentGuide.background3",
+        "editorIndentGuide.background4",
+        "editorIndentGuide.background5",
+        "editorIndentGuide.background6",
+        "editorLineNumber.foreground"
+      ],
+      "33": [
+        "activityBar.inactiveForeground",
+        "editorOverviewRuler.findMatchForeground",
+        "list.inactiveSelectionBackground",
+        "sideBySideEditor.horizontalBorder",
+        "sideBySideEditor.verticalBorder"
+      ],
+      "66": [
         "editorIndentGuide.activeBackground1",
         "editorIndentGuide.activeBackground2",
         "editorIndentGuide.activeBackground3",
@@ -332,49 +415,67 @@
         "input.placeholderForeground",
         "list.focusBackground",
         "tab.inactiveForeground"
+      ],
+      "77": [
+        "sideBarSectionHeader.foreground",
+        "terminal.ansiBrightBlack"
+      ],
+      "99": [
+        "gitlens.decorations.workspaceRepoMissingForegroundColor"
+      ],
+      "$": [
+        "statusBarItem.hoverForeground",
+        "statusBarItem.remoteHoverForeground",
+        "terminal.ansiBrightWhite",
+        "terminal.ansiWhite"
+      ],
+      "aa": [
+        "statusBar.foreground",
+        "statusBarItem.remoteForeground"
+      ],
+      "bb": [
+        "sideBarTitle.foreground"
+      ],
+      "cc": [
+        "editorLineNumber.activeForeground",
+        "errorLens.statusBarErrorForeground",
+        "errorLens.statusBarHintForeground",
+        "errorLens.statusBarIconErrorForeground",
+        "errorLens.statusBarIconWarningForeground",
+        "errorLens.statusBarInfoForeground",
+        "errorLens.statusBarWarningForeground",
+        "list.inactiveSelectionForeground"
+      ],
+      "d4": [
+        "editor.foreground",
+        "terminal.foreground"
+      ],
+      "ee": [
+        "activityBar.foreground",
+        "editor.findMatchForeground",
+        "editor.findMatchHighlightForeground",
+        "editorSuggestWidget.foreground",
+        "editorSuggestWidget.highlightForeground",
+        "input.foreground",
+        "list.activeSelectionForeground",
+        "list.highlightForeground",
+        "list.hoverForeground",
+        "sideBar.foreground",
+        "tab.activeForeground"
       ]
     },
-    {
-      "alpha": "33",
-      "name": "white",
-      "scopes": [
-        "activityBar.inactiveForeground",
-        "list.inactiveSelectionBackground",
-        "editorOverviewRuler.findMatchForeground"
-      ]
-    },
-    {
-      "alpha": "22",
-      "name": "white",
-      "scopes": [
-        "button.secondaryBackground",
-        "editor.selectionBackground",
-        "editor.selectionHighlightBackground",
-        "editorIndentGuide.background1",
-        "editorIndentGuide.background2",
-        "editorIndentGuide.background3",
-        "editorIndentGuide.background4",
-        "editorIndentGuide.background5",
-        "editorIndentGuide.background6",
-        "editorLineNumber.foreground"
-      ]
-    },
-    {
-      "alpha": "11",
-      "name": "white",
-      "scopes": [
-        "editorBracketMatch.background",
-        "statusBarItem.hoverBackground"
-      ]
-    },
-    {
-      "name": "yellow",
-      "scopes": [
+    "yellow": {
+      "$": [
+        "charts.orange",
+        "charts.yellow",
+        "diffEditor.moveActive.border",
+        "editorBracketHighlight.foreground1",
+        "editorUnicodeHighlight.border",
         "terminal.ansiBrightYellow",
         "terminal.ansiYellow"
       ]
     }
-  ],
+  },
   "tokenColors": {
     "@fail": [
       {
@@ -410,8 +511,6 @@
           "keyword.other.special-method.ruby",
           "markup.quote.markdown",
           "meta.function-call.generic.python",
-          "punctuation.definition.string.begin.markdown",
-          "punctuation.definition.string.end.markdown",
           "support.function",
           "support.variable.property.dom.js",
           "support.variable.property.dom.ts",
@@ -426,9 +525,7 @@
           "markup.underline.link.markdown",
           "meta.object-literal.key.js",
           "meta.object-literal.key.ts",
-          "support.constant.parity.css",
-          "support.type.property-name.css",
-          "support.type.property-name.media.css"
+          "support.constant.parity.css"
         ]
       },
       {
@@ -493,18 +590,19 @@
           "keyword.var.go",
           "markup.italic.markdown",
           "meta.tag.sgml.doctype.html",
-          "punctuation.definition.block.tag.jsdoc",
-          "punctuation.definition.directive",
-          "punctuation.definition.italic.markdown",
-          "punctuation.definition.keyword",
-          "punctuation.definition.storage.type.objc",
-          "punctuation.support.type.property-name.begin.json",
-          "punctuation.support.type.property-name.end.json",
           "storage.type",
           "storage.type.annotation.java",
           "storage.type.java",
           "support.constant.math",
-          "support.type.property-name.json"
+          "support.type.builtin.graphql",
+          "support.type.graphql",
+          "support.type.object.module.js",
+          "support.type.primitive.ts",
+          "support.type.property-name",
+          "support.type.property-name.css",
+          "support.type.property-name.json",
+          "support.type.property-name.media.css",
+          "support.type.python"
         ]
       },
       {
@@ -533,22 +631,6 @@
           "meta.parameters.js",
           "meta.property-name.css",
           "meta.property-value.css",
-          "punctuation.definition.bracket.curly.begin.jsdoc",
-          "punctuation.definition.bracket.curly.end.jsdoc",
-          "punctuation.definition.constant.css",
-          "punctuation.definition.dictionary",
-          "punctuation.definition.variable.less",
-          "punctuation.section.function.begin.bracket.round.css",
-          "punctuation.section.function.end.bracket.round.css",
-          "punctuation.section.media.begin.bracket.curly.css",
-          "punctuation.section.media.end.bracket.curly.css",
-          "punctuation.section.property-list.begin.bracket.curly.css",
-          "punctuation.section.property-list.begin.bracket.curly.scss",
-          "punctuation.section.property-list.end.bracket.curly.css",
-          "punctuation.section.property-list.end.bracket.curly.scss",
-          "punctuation.separator.comma.js",
-          "punctuation.separator.dictionary.pair",
-          "punctuation.separator.list.comma.css",
           "source",
           "string.other.link.description.title.markdown",
           "support.constant.color",
@@ -566,17 +648,47 @@
         "scope": [
           "meta.brace",
           "meta.group.regexp",
-          "punctuation",
           "source.js-ignored-vscode",
           "string.regexp.js",
-          "support.constant",
-          "support.type.object.module.js"
+          "support.constant"
         ]
       },
       {
         "alpha": "aa",
         "scope": [
-          "punctuation.separator.key-value"
+          "punctuation",
+          "punctuation.definition.block.tag.jsdoc",
+          "punctuation.definition.bold.markdown",
+          "punctuation.definition.bracket.curly.begin.jsdoc",
+          "punctuation.definition.bracket.curly.end.jsdoc",
+          "punctuation.definition.comment",
+          "punctuation.definition.constant.css",
+          "punctuation.definition.dictionary",
+          "punctuation.definition.directive",
+          "punctuation.definition.heading.markdown",
+          "punctuation.definition.interpolation.begin.bracket.curly.scss",
+          "punctuation.definition.interpolation.end.bracket.curly.scss",
+          "punctuation.definition.italic.markdown",
+          "punctuation.definition.keyword",
+          "punctuation.definition.metadata.markdown",
+          "punctuation.definition.storage.type.objc",
+          "punctuation.definition.string.begin.markdown",
+          "punctuation.definition.string.end.markdown",
+          "punctuation.definition.variable.less",
+          "punctuation.section.function.begin.bracket.round.css",
+          "punctuation.section.function.end.bracket.round.css",
+          "punctuation.section.media.begin.bracket.curly.css",
+          "punctuation.section.media.end.bracket.curly.css",
+          "punctuation.section.property-list.begin.bracket.curly.css",
+          "punctuation.section.property-list.begin.bracket.curly.scss",
+          "punctuation.section.property-list.end.bracket.curly.css",
+          "punctuation.section.property-list.end.bracket.curly.scss",
+          "punctuation.separator.comma.js",
+          "punctuation.separator.dictionary.pair",
+          "punctuation.separator.key-value",
+          "punctuation.separator.list.comma.css",
+          "punctuation.support.type.property-name.begin.json",
+          "punctuation.support.type.property-name.end.json"
         ]
       },
       {
@@ -584,7 +696,6 @@
         "fontStyle": "italic",
         "scope": [
           "comment",
-          "punctuation.definition.comment",
           "string.quoted.docstring.multi.python"
         ]
       }
@@ -605,8 +716,6 @@
           "support.constant.property-value.css",
           "support.constant.property-value.scss",
           "support.constant.property.math",
-          "support.type.graphql",
-          "support.type.primitive.ts",
           "support.variable.dom.js",
           "support.variable.dom.ts",
           "support.variable.dom.tsx",
@@ -625,9 +734,6 @@
       },
       {
         "scope": [
-          "punctuation.definition.interpolation.begin.bracket.curly.scss",
-          "punctuation.definition.interpolation.end.bracket.curly.scss",
-          "punctuation.definition.metadata.markdown",
           "variable.language.special.self.python",
           "variable.language.super",
           "variable.language.this.js",
@@ -638,21 +744,17 @@
         "scope": [
           "entity.name.section.markdown",
           "meta.object-literal.key",
-          "punctuation.definition.heading.markdown",
           "source.coffee.embedded.source",
           "string.interpolated.jade",
           "string.quoted",
           "string.template.js",
-          "string.unquoted.plain.out.yaml",
-          "support.type.builtin.graphql",
-          "support.type.property-name"
+          "string.unquoted.plain.out.yaml"
         ]
       },
       {
         "fontStyle": "bold",
         "scope": [
-          "markup.bold.markdown",
-          "punctuation.definition.bold.markdown"
+          "markup.bold.markdown"
         ]
       }
     ]

@@ -1,7 +1,7 @@
 from os import scandir
 from pathlib import Path
 
-from utils.const import DIST_THEMES_DIRPATH
+from utils.settings import DIST_THEMES_DIRPATH
 
 
 def main() -> None:

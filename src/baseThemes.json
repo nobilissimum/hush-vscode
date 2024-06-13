@@ -1,5 +1,7 @@
 {
+  "$debug": "#aaa152",
   "$find": "#dbd068",
+  "$noFolder": "#3c88b9",
   "@fail": "#bc5c7e",
   "@info": "#74add2",
   "@success": "#89a865",
@@ -7,7 +9,7 @@
   "_dark": "#121c26",
   "_light": "#202733",
   "_main": "#1d232e",
-  "accentColor": "#006c62",
+  "accentColor": "#3c88b9",
   "black": "#000000",
   "blue": "#74add2",
   "brightBlack": "#333333",

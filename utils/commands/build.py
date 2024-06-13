@@ -4,7 +4,7 @@ from os import scandir
 from pathlib import Path
 from typing import Any
 
-from utils.const import (
+from utils.settings import (
     COLOR_HEX_LENGTH,
     DIST_THEMES_DIRPATH,
     INDENTATION,
@@ -25,14 +25,14 @@ def create_theme_file(
     theme_token_colors = []
 
     # Handle `colors`
-    colors: list[dict[str, str | list[str]]] = config["colors"]
-    for color in colors:
-        color_name = color["name"]
-        color_alpha = color.get("alpha", "ff")
-        color_hex = f"{theme[color_name]}{color_alpha}"[:COLOR_HEX_LENGTH].upper()
+    colors: dict[str, dict[str, list[str]]] = config["colors"]
+    for color_name, variants in colors.items():
+        for alpha, color_scopes in variants.items():
+            color_alpha: str = alpha if alpha != "$" else ""
+            color_hex = f"{theme[color_name]}{color_alpha}"[:COLOR_HEX_LENGTH].upper()
 
-        for color_scope in color["scopes"]:
-            theme_colors[color_scope] = color_hex
+            for color_scope in color_scopes:
+                theme_colors[color_scope] = color_hex
 
     # Handle `tokenColors`
     token_colors: dict[str, list[dict[str, str | list[str]]]] = config["tokenColors"]
