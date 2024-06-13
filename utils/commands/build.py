@@ -28,7 +28,7 @@ def create_theme_file(
     colors: dict[str, dict[str, list[str]]] = config["colors"]
     for color_name, variants in colors.items():
         for alpha, color_scopes in variants.items():
-            color_alpha: str = alpha or "ff"
+            color_alpha: str = alpha if alpha != "$" else ""
             color_hex = f"{theme[color_name]}{color_alpha}"[:COLOR_HEX_LENGTH].upper()
 
             for color_scope in color_scopes:
