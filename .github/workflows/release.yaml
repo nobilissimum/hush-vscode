@@ -1,0 +1,30 @@
+name: Release
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  generate-release-notes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '14'
+
+      - name: Generate Release Notes
+        id: release_notes
+        uses: release-drafter/release-drafter@v6
+        with:
+          config-name: release-notes.yaml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Print Release Notes
+        run: echo "${{ steps.release_notes.outputs.body }}"
