@@ -1,11 +1,13 @@
+import logging
 import time
 
 from watchdog.events import FileModifiedEvent, FileSystemEventHandler
 from watchdog.observers import Observer
 
 from utils.commands.build import main as build_main
-from utils.const import DEV_DIRPATH
-from utils.logging import logger
+from utils.settings import DEV_DIRPATH
+
+logger = logging.getLogger(__name__)
 
 
 class FileChangeHandler(FileSystemEventHandler):
@@ -13,19 +15,25 @@ class FileChangeHandler(FileSystemEventHandler):
         self.callback = callback
 
     def on_modified(self, event: FileModifiedEvent) -> None:
-        if not event.is_directory:
-            logger.info("File modified: %a", event.src_path)
-            self.callback()
+        if event.is_directory:
+            return
+
+        logger.info("File modified: %a", event.src_path)
+        self.callback()
 
     def on_created(self, event: FileModifiedEvent) -> None:
-        if not event.is_directory:
-            logger.info("File created: %a", event.src_path)
-            self.callback()
+        if event.is_directory:
+            return
+
+        logger.info("File created: %a", event.src_path)
+        self.callback()
 
     def on_deleted(self, event: FileModifiedEvent) -> None:
-        if not event.is_directory:
-            logger.info("File deleted: %a", event.src_path)
-            self.callback()
+        if event.is_directory:
+            return
+
+        logger.info("File deleted: %a", event.src_path)
+        self.callback()
 
 
 def main() -> None:

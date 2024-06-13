@@ -4,7 +4,7 @@ from os import scandir
 from pathlib import Path
 from typing import Any
 
-from utils.const import (
+from utils.settings import (
     COLOR_HEX_LENGTH,
     DIST_THEMES_DIRPATH,
     INDENTATION,

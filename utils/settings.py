@@ -1,3 +1,5 @@
+import os
+
 from typing import Final
 
 DEFAULT_THEME_MODE: Final[str] = "vs-dark"
@@ -14,6 +16,8 @@ DIST_THEMES_DIRPATH: Final[str] = "themes"
 COMMANDS_DIRECTORY: Final[str] = "utils/commands"
 
 INDENTATION: Final[int] = 2
+
+LOG_LEVEL: str = os.environ.get("LOG_LEVEL", "WARNING")
 
 THEME_NAME: Final[str] = "Hush"
 THEME_FILE_EXTENSION: Final[str] = "-color-theme.json"

@@ -7,11 +7,17 @@ from argparse import ArgumentParser, Namespace
 from pathlib import Path
 from typing import TYPE_CHECKING
 
-from utils.const import COMMANDS_DIRECTORY
+from dotenv import load_dotenv
+
+from utils.logging import setup_logging
+from utils.settings import COMMANDS_DIRECTORY
 
 if TYPE_CHECKING:
     from importlib.machinery import ModuleSpec
     from types import ModuleType
+
+load_dotenv()
+setup_logging()
 
 logger = logging.getLogger()
 
