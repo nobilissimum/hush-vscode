@@ -441,6 +441,7 @@
         "terminal.ansiBrightBlack"
       ],
       "99": [
+        "activityBarTop.inactiveForeground",
         "gitlens.decorations.workspaceRepoMissingForegroundColor"
       ],
       "$": [
@@ -450,6 +451,7 @@
         "terminal.ansiWhite"
       ],
       "aa": [
+        "breadcrumb.foreground",
         "statusBar.foreground",
         "statusBarItem.remoteForeground"
       ],
@@ -457,7 +459,6 @@
         "sideBarTitle.foreground"
       ],
       "cc": [
-        "breadcrumb.foreground",
         "editorActiveLineNumber.foreground",
         "editorLineNumber.activeForeground",
         "errorLens.statusBarErrorForeground",
@@ -469,6 +470,7 @@
         "list.inactiveSelectionForeground"
       ],
       "d4": [
+        "activityBarTop.foreground",
         "breadcrumb.activeSelectionForeground",
         "breadcrumb.focusForeground",
         "editor.foreground",
