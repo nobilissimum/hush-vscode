@@ -10,3 +10,4 @@ __pycache__
 
 # Per-machine state
 .env
+app.log
