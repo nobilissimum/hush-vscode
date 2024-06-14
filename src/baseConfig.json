@@ -1,8 +1,10 @@
 {
   "colors": {
     "$debug": {
+      "99": [
+        "commandCenter.debuggingBackground"
+      ],
       "$": [
-        "commandCenter.debuggingBackground",
         "statusBar.debuggingBackground"
       ]
     },
@@ -24,6 +26,9 @@
     },
     "@fail": {
       "22": [
+        "diffEditor.removedLineBackground",
+        "diffEditorGutter.removedLineBackground",
+        "editor.linkedEditingBackground",
         "errorLens.errorBackground",
         "errorLens.errorBackgroundLight",
         "errorLens.errorMessageBackground",
@@ -37,7 +42,6 @@
         "editorOverviewRuler.errorForeground"
       ],
       "$": [
-        "diffEditorGutter.removedLineBackground",
         "editorError.foreground",
         "editorGutter.deletedBackground",
         "errorForeground",
@@ -64,6 +68,7 @@
     },
     "@info": {
       "22": [
+        "editor.wordHighlightStrongBackground",
         "errorLens.infoBackground",
         "errorLens.infoBackgroundLight",
         "errorLens.infoMessageBackground",
@@ -101,11 +106,16 @@
       ]
     },
     "@success": {
+      "22": [
+        "diffEditor.insertedLineBackground",
+        "diffEditorGutter.insertedLineBackground",
+        "editor.inlineValuesBackground",
+        "editor.stackFrameHighlightBackground"
+      ],
       "99": [
         "editorOverviewRuler.addedForeground"
       ],
       "$": [
-        "diffEditorGutter.insertedLineBackground",
         "editorGutter.addedBackground",
         "gitDecoration.addedResourceForeground",
         "gitDecoration.renamedResourceForeground",
@@ -398,6 +408,7 @@
       ],
       "33": [
         "activityBar.inactiveForeground",
+        "diffEditor.diagonalFill",
         "editorOverviewRuler.findMatchForeground",
         "list.inactiveSelectionBackground",
         "sideBySideEditor.horizontalBorder",
@@ -437,6 +448,7 @@
         "sideBarTitle.foreground"
       ],
       "cc": [
+        "editorActiveLineNumber.foreground",
         "editorLineNumber.activeForeground",
         "errorLens.statusBarErrorForeground",
         "errorLens.statusBarHintForeground",
