@@ -1,3 +1,28 @@
-.vscode/**
-.vscode-test/**
+*.hidden*
+
+# Scripts
+.venv
+__pycache__
+utils
+
+.ruff.toml
+Pipfile
+Pipfile.lock
+
+*.sh
+*.py
+*.pyc
+
+# Config
+src
+
+# Unnecessary to package
+.git
+.github
 .gitignore
+.vscode
+
+*.vsix
+
+# Per-machine state
+.env
