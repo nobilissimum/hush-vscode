@@ -1,13 +1,15 @@
 {
   "colors": {
     "$debug": {
+      "99": [
+        "commandCenter.debuggingBackground"
+      ],
       "$": [
-        "commandCenter.debuggingBackground",
         "statusBar.debuggingBackground"
       ]
     },
     "$find": {
-      "44": [
+      "33": [
         "editor.findMatchHighlightBackground"
       ],
       "77": [
@@ -24,6 +26,9 @@
     },
     "@fail": {
       "22": [
+        "diffEditor.removedLineBackground",
+        "diffEditorGutter.removedLineBackground",
+        "editor.linkedEditingBackground",
         "errorLens.errorBackground",
         "errorLens.errorBackgroundLight",
         "errorLens.errorMessageBackground",
@@ -37,7 +42,6 @@
         "editorOverviewRuler.errorForeground"
       ],
       "$": [
-        "diffEditorGutter.removedLineBackground",
         "editorError.foreground",
         "editorGutter.deletedBackground",
         "errorForeground",
@@ -64,6 +68,7 @@
     },
     "@info": {
       "22": [
+        "editor.wordHighlightStrongBackground",
         "errorLens.infoBackground",
         "errorLens.infoBackgroundLight",
         "errorLens.infoMessageBackground",
@@ -97,15 +102,22 @@
         "gitlens.graphScrollMarkerRemoteBranchesColor",
         "minimap.infoHighlight",
         "minimapGutter.modifiedBackground",
-        "settings.modifiedItemIndicator"
+        "settings.modifiedItemIndicator",
+        "textLink.activeForeground"
       ]
     },
     "@success": {
+      "22": [
+        "diffEditor.insertedLineBackground",
+        "diffEditorGutter.insertedLineBackground",
+        "editor.inlineValuesBackground",
+        "editor.stackFrameHighlightBackground",
+        "textPreformat.background"
+      ],
       "99": [
         "editorOverviewRuler.addedForeground"
       ],
       "$": [
-        "diffEditorGutter.insertedLineBackground",
         "editorGutter.addedBackground",
         "gitDecoration.addedResourceForeground",
         "gitDecoration.renamedResourceForeground",
@@ -128,11 +140,13 @@
         "gitlens.openPullRequestIconColor",
         "gitlens.unpublishedChangesIconColor",
         "gitlens.unpublishedCommitIconColor",
-        "minimapGutter.addedBackground"
+        "minimapGutter.addedBackground",
+        "textPreformat.foreground"
       ]
     },
     "@warn": {
       "22": [
+        "editorUnicodeHighlight.background",
         "errorLens.hintBackground",
         "errorLens.hintBackgroundLight",
         "errorLens.hintMessageBackground",
@@ -232,7 +246,8 @@
         "editor.lineHighlightBackground",
         "editor.rangeHighlightBackground",
         "minimapSlider.background",
-        "minimapSlider.hoverBackground"
+        "minimapSlider.hoverBackground",
+        "textBlockQuote.background"
       ],
       "33": [
         "list.hoverBackground",
@@ -311,6 +326,7 @@
         "commandCenter.inactiveBorder",
         "debugExceptionWidget.border",
         "diffEditor.move.border",
+        "diffEditor.moveActive.border",
         "dropdown.border",
         "editor.lineHighlightBorder",
         "editor.snippetFinalTabstopHighlightBorder",
@@ -320,6 +336,7 @@
         "editorGroup.border",
         "editorHoverWidget.border",
         "editorOverviewRuler.border",
+        "editorUnicodeHighlight.border",
         "focusBorder",
         "inlineChat.border",
         "inlineChat.shadow",
@@ -333,6 +350,7 @@
         "keybindingLabel.border",
         "keybindingLabel.bottomBorder",
         "list.dropBackground",
+        "listFilterWidget.noMatchesOutline",
         "listFilterWidget.shadow",
         "menu.selectionBorder",
         "mergeEditor.conflict.handledFocused.border",
@@ -384,7 +402,8 @@
     },
     "white": {
       "11": [
-        "editorBracketMatch.background"
+        "editorBracketMatch.background",
+        "tree.tableColumnsBorder"
       ],
       "22": [
         "button.secondaryBackground",
@@ -398,6 +417,7 @@
       ],
       "33": [
         "activityBar.inactiveForeground",
+        "diffEditor.diagonalFill",
         "editorOverviewRuler.findMatchForeground",
         "list.inactiveSelectionBackground",
         "sideBySideEditor.horizontalBorder",
@@ -437,6 +457,7 @@
         "sideBarTitle.foreground"
       ],
       "cc": [
+        "editorActiveLineNumber.foreground",
         "editorLineNumber.activeForeground",
         "errorLens.statusBarErrorForeground",
         "errorLens.statusBarHintForeground",
@@ -468,9 +489,7 @@
       "$": [
         "charts.orange",
         "charts.yellow",
-        "diffEditor.moveActive.border",
         "editorBracketHighlight.foreground1",
-        "editorUnicodeHighlight.border",
         "terminal.ansiBrightYellow",
         "terminal.ansiYellow"
       ]

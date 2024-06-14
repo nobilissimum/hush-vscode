@@ -2,11 +2,17 @@
 
 All notable changes to the **hush** extension will be documented in this file.
 
+## [1.3.0] - 2024-06-14
+
+### Minor Enhancements 💄
+
+- Make color more consistent by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/10
+
 ## [1.2.1] - 2024-06-14
 
 ### Bug fixes 🔨
 
-- Remove scripts from package by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/8
+- Remove scripts from package by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/9
 
 ## [1.2.0] - 2024-06-14
 
