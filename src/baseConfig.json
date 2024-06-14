@@ -457,6 +457,7 @@
         "sideBarTitle.foreground"
       ],
       "cc": [
+        "breadcrumb.foreground",
         "editorActiveLineNumber.foreground",
         "editorLineNumber.activeForeground",
         "errorLens.statusBarErrorForeground",
@@ -468,6 +469,8 @@
         "list.inactiveSelectionForeground"
       ],
       "d4": [
+        "breadcrumb.activeSelectionForeground",
+        "breadcrumb.focusForeground",
         "editor.foreground",
         "terminal.foreground"
       ],
