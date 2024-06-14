@@ -9,7 +9,7 @@
       ]
     },
     "$find": {
-      "44": [
+      "33": [
         "editor.findMatchHighlightBackground"
       ],
       "77": [
@@ -102,7 +102,8 @@
         "gitlens.graphScrollMarkerRemoteBranchesColor",
         "minimap.infoHighlight",
         "minimapGutter.modifiedBackground",
-        "settings.modifiedItemIndicator"
+        "settings.modifiedItemIndicator",
+        "textLink.activeForeground"
       ]
     },
     "@success": {
@@ -110,7 +111,8 @@
         "diffEditor.insertedLineBackground",
         "diffEditorGutter.insertedLineBackground",
         "editor.inlineValuesBackground",
-        "editor.stackFrameHighlightBackground"
+        "editor.stackFrameHighlightBackground",
+        "textPreformat.background"
       ],
       "99": [
         "editorOverviewRuler.addedForeground"
@@ -138,11 +140,13 @@
         "gitlens.openPullRequestIconColor",
         "gitlens.unpublishedChangesIconColor",
         "gitlens.unpublishedCommitIconColor",
-        "minimapGutter.addedBackground"
+        "minimapGutter.addedBackground",
+        "textPreformat.foreground"
       ]
     },
     "@warn": {
       "22": [
+        "editorUnicodeHighlight.background",
         "errorLens.hintBackground",
         "errorLens.hintBackgroundLight",
         "errorLens.hintMessageBackground",
@@ -242,7 +246,8 @@
         "editor.lineHighlightBackground",
         "editor.rangeHighlightBackground",
         "minimapSlider.background",
-        "minimapSlider.hoverBackground"
+        "minimapSlider.hoverBackground",
+        "textBlockQuote.background"
       ],
       "33": [
         "list.hoverBackground",
@@ -321,6 +326,7 @@
         "commandCenter.inactiveBorder",
         "debugExceptionWidget.border",
         "diffEditor.move.border",
+        "diffEditor.moveActive.border",
         "dropdown.border",
         "editor.lineHighlightBorder",
         "editor.snippetFinalTabstopHighlightBorder",
@@ -330,6 +336,7 @@
         "editorGroup.border",
         "editorHoverWidget.border",
         "editorOverviewRuler.border",
+        "editorUnicodeHighlight.border",
         "focusBorder",
         "inlineChat.border",
         "inlineChat.shadow",
@@ -343,6 +350,7 @@
         "keybindingLabel.border",
         "keybindingLabel.bottomBorder",
         "list.dropBackground",
+        "listFilterWidget.noMatchesOutline",
         "listFilterWidget.shadow",
         "menu.selectionBorder",
         "mergeEditor.conflict.handledFocused.border",
@@ -394,7 +402,8 @@
     },
     "white": {
       "11": [
-        "editorBracketMatch.background"
+        "editorBracketMatch.background",
+        "tree.tableColumnsBorder"
       ],
       "22": [
         "button.secondaryBackground",
@@ -480,9 +489,7 @@
       "$": [
         "charts.orange",
         "charts.yellow",
-        "diffEditor.moveActive.border",
         "editorBracketHighlight.foreground1",
-        "editorUnicodeHighlight.border",
         "terminal.ansiBrightYellow",
         "terminal.ansiYellow"
       ]
