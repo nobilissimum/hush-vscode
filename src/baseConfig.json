@@ -242,6 +242,7 @@
     },
     "black": {
       "22": [
+        "chat.avatarBackground",
         "editor.findRangeHighlightBackground",
         "editor.lineHighlightBackground",
         "editor.rangeHighlightBackground",
@@ -459,6 +460,7 @@
         "sideBarTitle.foreground"
       ],
       "cc": [
+        "chat.avatarForeground",
         "editorActiveLineNumber.foreground",
         "editorLineNumber.activeForeground",
         "errorLens.statusBarErrorForeground",
