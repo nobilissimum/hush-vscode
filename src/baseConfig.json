@@ -242,6 +242,7 @@
     },
     "black": {
       "22": [
+        "chat.avatarBackground",
         "editor.findRangeHighlightBackground",
         "editor.lineHighlightBackground",
         "editor.rangeHighlightBackground",
@@ -441,6 +442,7 @@
         "terminal.ansiBrightBlack"
       ],
       "99": [
+        "activityBarTop.inactiveForeground",
         "gitlens.decorations.workspaceRepoMissingForegroundColor"
       ],
       "$": [
@@ -450,6 +452,7 @@
         "terminal.ansiWhite"
       ],
       "aa": [
+        "breadcrumb.foreground",
         "statusBar.foreground",
         "statusBarItem.remoteForeground"
       ],
@@ -457,6 +460,7 @@
         "sideBarTitle.foreground"
       ],
       "cc": [
+        "chat.avatarForeground",
         "editorActiveLineNumber.foreground",
         "editorLineNumber.activeForeground",
         "errorLens.statusBarErrorForeground",
@@ -468,6 +472,9 @@
         "list.inactiveSelectionForeground"
       ],
       "d4": [
+        "activityBarTop.foreground",
+        "breadcrumb.activeSelectionForeground",
+        "breadcrumb.focusForeground",
         "editor.foreground",
         "terminal.foreground"
       ],
@@ -533,8 +540,11 @@
           "support.function",
           "support.variable.property.dom.js",
           "support.variable.property.dom.ts",
+          "support.variable.property.dom.tsx",
           "variable.graphql",
           "variable.other.object.property.js",
+          "variable.other.object.property.ts",
+          "variable.other.object.property.tsx",
           "variable.other.property"
         ]
       },
@@ -544,6 +554,7 @@
           "markup.underline.link.markdown",
           "meta.object-literal.key.js",
           "meta.object-literal.key.ts",
+          "meta.object-literal.key.tsx",
           "support.constant.parity.css"
         ]
       },
@@ -574,6 +585,8 @@
           "keyword.control",
           "meta.definition.variable.name.java",
           "storage.modifier.async.js",
+          "storage.modifier.async.ts",
+          "storage.modifier.async.tsx",
           "storage.modifier.cs",
           "storage.modifier.import.java",
           "storage.modifier.java",
@@ -585,7 +598,9 @@
           "support.class.component.js",
           "support.class.component.ts",
           "support.class.component.tsx",
-          "support.variable.property.js"
+          "support.variable.property.js",
+          "support.variable.property.ts",
+          "support.variable.property.tsx"
         ]
       }
     ],
@@ -616,7 +631,11 @@
           "support.type.builtin.graphql",
           "support.type.graphql",
           "support.type.object.module.js",
+          "support.type.object.module.ts",
+          "support.type.object.module.tsx",
+          "support.type.primitive.js",
           "support.type.primitive.ts",
+          "support.type.primitive.tsx",
           "support.type.property-name",
           "support.type.property-name.css",
           "support.type.property-name.json",
@@ -648,6 +667,8 @@
           "entity.name.type.instance",
           "meta.paragraph.markdown",
           "meta.parameters.js",
+          "meta.parameters.ts",
+          "meta.parameters.tsx",
           "meta.property-name.css",
           "meta.property-value.css",
           "source",
@@ -669,6 +690,8 @@
           "meta.group.regexp",
           "source.js-ignored-vscode",
           "string.regexp.js",
+          "string.regexp.ts",
+          "string.regexp.tsx",
           "support.constant"
         ]
       },
@@ -703,6 +726,8 @@
           "punctuation.section.property-list.end.bracket.curly.css",
           "punctuation.section.property-list.end.bracket.curly.scss",
           "punctuation.separator.comma.js",
+          "punctuation.separator.comma.ts",
+          "punctuation.separator.comma.tsx",
           "punctuation.separator.dictionary.pair",
           "punctuation.separator.key-value",
           "punctuation.separator.list.comma.css",
@@ -732,6 +757,8 @@
           "entity.other.inherited-class",
           "support.class",
           "support.constant.json.js",
+          "support.constant.json.ts",
+          "support.constant.json.tsx",
           "support.constant.property-value.css",
           "support.constant.property-value.scss",
           "support.constant.property.math",
@@ -739,8 +766,14 @@
           "support.variable.dom.ts",
           "support.variable.dom.tsx",
           "support.variable.object.node.js",
+          "support.variable.object.node.ts",
+          "support.variable.object.node.tsx",
           "support.variable.object.process.js",
+          "support.variable.object.process.ts",
+          "support.variable.object.process.tsx",
           "support.variable.property.process.js",
+          "support.variable.property.process.ts",
+          "support.variable.property.process.tsx",
           "constant.numeric",
           "keyword.other.unit",
           "variable.parameter.function"
@@ -756,7 +789,8 @@
           "variable.language.special.self.python",
           "variable.language.super",
           "variable.language.this.js",
-          "variable.language.this.ts"
+          "variable.language.this.ts",
+          "variable.language.this.tsx"
         ]
       },
       {
@@ -767,6 +801,8 @@
           "string.interpolated.jade",
           "string.quoted",
           "string.template.js",
+          "string.template.ts",
+          "string.template.tsx",
           "string.unquoted.plain.out.yaml"
         ]
       },
