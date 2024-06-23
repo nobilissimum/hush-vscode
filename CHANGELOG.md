@@ -2,6 +2,13 @@
 
 All notable changes to the **hush** extension will be documented in this file.
 
+## [1.4.0] - 2024-06-24
+
+### Minor Enhancements 💄
+
+- Change grey colors to transluscent white by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/11
+- Turn json constants to pink color by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/12
+
 ## [1.3.0] - 2024-06-14
 
 ### Minor Enhancements 💄
