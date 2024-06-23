@@ -579,6 +579,8 @@
       {
         "scope": [
           "constant.language.boolean.yaml",
+          "constant.language.json",
+          "constant.language.json.comments",
           "constant.name.attribute.tag.jade",
           "constant.other.database-name.sql",
           "constant.other.table-name.sql",
@@ -639,6 +641,7 @@
           "support.type.property-name",
           "support.type.property-name.css",
           "support.type.property-name.json",
+          "support.type.property-name.json.comments",
           "support.type.property-name.media.css",
           "support.type.python"
         ]
@@ -732,7 +735,9 @@
           "punctuation.separator.key-value",
           "punctuation.separator.list.comma.css",
           "punctuation.support.type.property-name.begin.json",
-          "punctuation.support.type.property-name.end.json"
+          "punctuation.support.type.property-name.begin.json.comments",
+          "punctuation.support.type.property-name.end.json",
+          "punctuation.support.type.property-name.end.json.comments"
         ]
       },
       {
@@ -757,8 +762,11 @@
           "entity.other.inherited-class",
           "support.class",
           "support.constant.json.js",
+          "support.constant.json.comments.js",
           "support.constant.json.ts",
+          "support.constant.json.comments.ts",
           "support.constant.json.tsx",
+          "support.constant.json.comments.tsx",
           "support.constant.property-value.css",
           "support.constant.property-value.scss",
           "support.constant.property.math",
