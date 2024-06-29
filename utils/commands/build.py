@@ -16,6 +16,18 @@ from utils.settings import (
 )
 
 
+def get_color_hex(
+    theme: dict,
+    color_name: str,
+    alpha: str,
+) -> str | None:
+    if color_name == "$":
+        return None
+
+    color_alpha: str = alpha if alpha != "$" else ""
+    return f"{theme[color_name]}{color_alpha}"[:COLOR_HEX_LENGTH].upper()
+
+
 def create_theme_file(
     theme: dict,
     config: dict,
@@ -28,8 +40,7 @@ def create_theme_file(
     colors: dict[str, dict[str, list[str]]] = config["colors"]
     for color_name, variants in colors.items():
         for alpha, color_scopes in variants.items():
-            color_alpha: str = alpha if alpha != "$" else ""
-            color_hex = f"{theme[color_name]}{color_alpha}"[:COLOR_HEX_LENGTH].upper()
+            color_hex = get_color_hex(theme, color_name, alpha)
 
             for color_scope in color_scopes:
                 theme_colors[color_scope] = color_hex
