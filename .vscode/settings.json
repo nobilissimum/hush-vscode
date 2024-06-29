@@ -1,4 +1,28 @@
 {
+  "[json]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "never",
+      "source.organizeImports": "never"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.formatOnSaveMode": "file",
+    "editor.formatOnType": false,
+    "editor.tabSize": 2
+  },
+  "[jsonc]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "never",
+      "source.organizeImports": "never"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.formatOnSaveMode": "file",
+    "editor.formatOnType": false,
+    "editor.tabSize": 2
+  },
   "[python]": {
     "editor.codeActionsOnSave": {
       "source.fixAll": "always",
@@ -11,8 +35,9 @@
     "editor.formatOnType": false,
     "editor.insertSpaces": true,
     "editor.tabSize": 4,
-    "gitlens.codeLens.symbolScopes": [
-      "!Module"
-    ]
+    "gitlens.codeLens.symbolScopes": ["!Module"]
   },
+  "workbench.colorCustomizations": {
+    "button.foreground": "#ff0000"
+  }
 }
