@@ -1,28 +1,16 @@
 {
   "colors": {
     "$debug": {
-      "99": [
-        "commandCenter.debuggingBackground"
-      ],
-      "$": [
-        "statusBar.debuggingBackground"
-      ]
+      "99": ["commandCenter.debuggingBackground"],
+      "$": ["statusBar.debuggingBackground"]
     },
     "$find": {
-      "33": [
-        "editor.findMatchHighlightBackground"
-      ],
-      "77": [
-        "editor.findMatchBackground"
-      ],
-      "dd": [
-        "minimap.findMatchHighlight"
-      ]
+      "33": ["editor.findMatchHighlightBackground"],
+      "77": ["editor.findMatchBackground"],
+      "dd": ["minimap.findMatchHighlight"]
     },
     "$noFolder": {
-      "$": [
-        "statusBar.noFolderBackground"
-      ]
+      "$": ["statusBar.noFolderBackground"]
     },
     "@fail": {
       "22": [
@@ -34,9 +22,7 @@
         "errorLens.errorMessageBackground",
         "errorLens.errorRangeBackground"
       ],
-      "77": [
-        "inputValidation.errorBackground"
-      ],
+      "77": ["inputValidation.errorBackground"],
       "99": [
         "editorOverviewRuler.deletedForeground",
         "editorOverviewRuler.errorForeground"
@@ -75,9 +61,7 @@
         "errorLens.infoRangeBackground",
         "gitlens.lineHighlightBackgroundColor"
       ],
-      "77": [
-        "inputValidation.infoBackground"
-      ],
+      "77": ["inputValidation.infoBackground"],
       "99": [
         "editorOverviewRuler.incomingContentForeground",
         "editorOverviewRuler.infoForeground",
@@ -114,9 +98,7 @@
         "editor.stackFrameHighlightBackground",
         "textPreformat.background"
       ],
-      "99": [
-        "editorOverviewRuler.addedForeground"
-      ],
+      "99": ["editorOverviewRuler.addedForeground"],
       "$": [
         "editorGutter.addedBackground",
         "gitDecoration.addedResourceForeground",
@@ -161,9 +143,7 @@
         "minimap.hintHighlight",
         "minimap.warningHighlight"
       ],
-      "99": [
-        "editorOverviewRuler.warningForeground"
-      ],
+      "99": ["editorOverviewRuler.warningForeground"],
       "$": [
         "editorHint.foreground",
         "editorWarning.foreground",
@@ -205,10 +185,7 @@
       ]
     },
     "_light": {
-      "$": [
-        "editor.background",
-        "tab.activeBackground"
-      ]
+      "$": ["editor.background", "tab.activeBackground"]
     },
     "_main": {
       "$": [
@@ -256,21 +233,12 @@
         "menu.separatorBackground",
         "minimapSlider.activeBackground"
       ],
-      "66": [
-        "scrollbarSlider.background",
-        "scrollbarSlider.hoverBackground"
-      ],
-      "88": [
-        "scrollbarSlider.activeBackground"
-      ],
-      "$": [
-        "terminal.ansiBlack"
-      ]
+      "66": ["scrollbarSlider.background", "scrollbarSlider.hoverBackground"],
+      "88": ["scrollbarSlider.activeBackground"],
+      "$": ["terminal.ansiBlack"]
     },
     "blue": {
-      "77": [
-        "textBlockQuote.border"
-      ],
+      "77": ["textBlockQuote.border"],
       "$": [
         "editorBracketHighlight.foreground3",
         "textLink.foreground",
@@ -279,20 +247,11 @@
       ]
     },
     "cyan": {
-      "$": [
-        "terminal.ansiCyan",
-        "terminal.ansiBrightCyan"
-      ]
+      "$": ["terminal.ansiCyan", "terminal.ansiBrightCyan"]
     },
     "green": {
-      "$": [
-        "charts.green",
-        "terminal.ansiGreen",
-        "terminal.ansiBrightGreen"
-      ],
-      "1a": [
-        "diffEditor.insertedTextBackground"
-      ]
+      "$": ["charts.green", "terminal.ansiGreen", "terminal.ansiBrightGreen"],
+      "1a": ["diffEditor.insertedTextBackground"]
     },
     "pink": {
       "$": [
@@ -303,9 +262,7 @@
         "terminal.ansiMagenta",
         "terminal.ansiRed"
       ],
-      "1a": [
-        "diffEditor.removedTextBackground"
-      ]
+      "1a": ["diffEditor.removedTextBackground"]
     },
     "purple": {
       "$": [
@@ -402,10 +359,7 @@
       ]
     },
     "white": {
-      "11": [
-        "editorBracketMatch.background",
-        "tree.tableColumnsBorder"
-      ],
+      "11": ["editorBracketMatch.background", "tree.tableColumnsBorder"],
       "22": [
         "button.secondaryBackground",
         "editorIndentGuide.background1",
@@ -437,10 +391,7 @@
         "list.focusBackground",
         "tab.inactiveForeground"
       ],
-      "77": [
-        "sideBarSectionHeader.foreground",
-        "terminal.ansiBrightBlack"
-      ],
+      "77": ["sideBarSectionHeader.foreground", "terminal.ansiBrightBlack"],
       "99": [
         "activityBarTop.inactiveForeground",
         "gitlens.decorations.workspaceRepoMissingForegroundColor"
@@ -456,9 +407,7 @@
         "statusBar.foreground",
         "statusBarItem.remoteForeground"
       ],
-      "bb": [
-        "sideBarTitle.foreground"
-      ],
+      "bb": ["sideBarTitle.foreground"],
       "cc": [
         "chat.avatarForeground",
         "editorActiveLineNumber.foreground",
@@ -505,25 +454,18 @@
   "tokenColors": {
     "@fail": [
       {
-        "scope": [
-          "markup.underline.error"
-        ]
+        "scope": ["markup.underline.error"]
       }
     ],
     "@info": [
       {
-        "scope": [
-          "markup.underline.info"
-        ]
+        "scope": ["markup.underline.info"]
       }
     ],
     "@success": [],
     "@warn": [
       {
-        "scope": [
-          "markup.underline.warning",
-          "markup.underline.hint"
-        ]
+        "scope": ["markup.underline.warning", "markup.underline.hint"]
       }
     ],
     "blue": [
@@ -559,22 +501,16 @@
         ]
       },
       {
-        "scope": [
-          "token.info-token"
-        ]
+        "scope": ["token.info-token"]
       },
       {
         "fontStyle": "italic",
-        "scope": [
-          "markup.quote.markdown"
-        ]
+        "scope": ["markup.quote.markdown"]
       }
     ],
     "pink": [
       {
-        "scope": [
-          "token.error-token"
-        ]
+        "scope": ["token.error-token"]
       },
       {
         "scope": [
@@ -647,9 +583,7 @@
         ]
       },
       {
-        "scope": [
-          "token.debug-token"
-        ]
+        "scope": ["token.debug-token"]
       },
       {
         "fontStyle": "italic",
@@ -743,10 +677,7 @@
       {
         "alpha": 92,
         "fontStyle": "italic",
-        "scope": [
-          "comment",
-          "string.quoted.docstring.multi.python"
-        ]
+        "scope": ["comment", "string.quoted.docstring.multi.python"]
       }
     ],
     "yellow": [
@@ -788,9 +719,7 @@
         ]
       },
       {
-        "scope": [
-          "token.warn-token"
-        ]
+        "scope": ["token.warn-token"]
       },
       {
         "scope": [
@@ -816,9 +745,7 @@
       },
       {
         "fontStyle": "bold",
-        "scope": [
-          "markup.bold.markdown"
-        ]
+        "scope": ["markup.bold.markdown"]
       }
     ]
   }
