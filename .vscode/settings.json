@@ -36,8 +36,5 @@
     "editor.insertSpaces": true,
     "editor.tabSize": 4,
     "gitlens.codeLens.symbolScopes": ["!Module"]
-  },
-  "workbench.colorCustomizations": {
-    "button.foreground": "#ff0000"
   }
 }
