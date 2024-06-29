@@ -1,5 +1,10 @@
 {
   "colors": {
+    "$": {
+      "$": [
+        "editor.findMatchHighlightForeground"
+      ]
+    },
     "$debug": {
       "99": ["commandCenter.debuggingBackground"],
       "$": ["statusBar.debuggingBackground"]
@@ -200,6 +205,7 @@
       "33": [
         "editor.selectionBackground",
         "editor.selectionHighlightBackground",
+        "inputOption.activeBackground",
         "minimap.selectionHighlight",
         "minimap.selectionOccurrenceHighlight"
       ],
@@ -301,6 +307,7 @@
         "inlineChatInput.border",
         "inlineChatInput.focusBorder",
         "inputOption.activeBorder",
+        "inputOption.hoverBackground",
         "inputValidation.errorBorder",
         "inputValidation.infoBorder",
         "inputValidation.warningBorder",
@@ -359,7 +366,10 @@
       ]
     },
     "white": {
-      "11": ["editorBracketMatch.background", "tree.tableColumnsBorder"],
+      "11": [
+        "editorBracketMatch.background",
+        "tree.tableColumnsBorder"
+      ],
       "22": [
         "button.secondaryBackground",
         "editorIndentGuide.background1",
@@ -430,7 +440,6 @@
       "ee": [
         "activityBar.foreground",
         "editor.findMatchForeground",
-        "editor.findMatchHighlightForeground",
         "editorSuggestWidget.foreground",
         "editorSuggestWidget.highlightForeground",
         "input.foreground",
@@ -439,6 +448,9 @@
         "list.hoverForeground",
         "sideBar.foreground",
         "tab.activeForeground"
+      ],
+      "ff": [
+        "inputOption.activeForeground"
       ]
     },
     "yellow": {
