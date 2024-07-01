@@ -1,9 +1,7 @@
 {
   "colors": {
     "$": {
-      "$": [
-        "editor.findMatchHighlightForeground"
-      ]
+      "$": ["editor.findMatchHighlightForeground"]
     },
     "$debug": {
       "99": ["commandCenter.debuggingBackground"],
@@ -366,10 +364,7 @@
       ]
     },
     "white": {
-      "11": [
-        "editorBracketMatch.background",
-        "tree.tableColumnsBorder"
-      ],
+      "11": ["editorBracketMatch.background", "tree.tableColumnsBorder"],
       "22": [
         "button.secondaryBackground",
         "editorIndentGuide.background1",
@@ -384,11 +379,13 @@
         "activityBar.inactiveForeground",
         "diffEditor.diagonalFill",
         "editorOverviewRuler.findMatchForeground",
+        "gitlens.trailingLineForegroundColor",
         "list.inactiveSelectionBackground",
         "sideBySideEditor.horizontalBorder",
         "sideBySideEditor.verticalBorder"
       ],
       "66": [
+        "editorCodeLens.foreground",
         "editorIndentGuide.activeBackground1",
         "editorIndentGuide.activeBackground2",
         "editorIndentGuide.activeBackground3",
@@ -417,7 +414,7 @@
         "statusBar.foreground",
         "statusBarItem.remoteForeground"
       ],
-      "bb": ["sideBarTitle.foreground"],
+      "bb": ["gitlens.gutterForegroundColor", "sideBarTitle.foreground"],
       "cc": [
         "chat.avatarForeground",
         "editorActiveLineNumber.foreground",
@@ -449,9 +446,7 @@
         "sideBar.foreground",
         "tab.activeForeground"
       ],
-      "ff": [
-        "inputOption.activeForeground"
-      ]
+      "ff": ["inputOption.activeForeground"]
     },
     "yellow": {
       "$": [
