@@ -1,6 +1,6 @@
 import json
 
-from os import scandir
+from os import DirEntry, scandir
 from pathlib import Path
 
 from utils.settings import (
@@ -8,7 +8,13 @@ from utils.settings import (
     DIST_THEMES_DIRPATH,
     NODE_PACKAGE_PATH,
     THEME_FILE_EXTENSION,
+    THEME_NAME,
 )
+
+
+def sort_themes(entry: DirEntry) -> str:
+    entry_casefold = entry.name.replace(THEME_FILE_EXTENSION, "").casefold()
+    return "" if entry_casefold == THEME_NAME.casefold() else entry_casefold
 
 
 def main() -> None:
@@ -24,7 +30,7 @@ def main() -> None:
         }
         for theme_entry in sorted(
             scandir(DIST_THEMES_DIRPATH),
-            key=lambda x: x.name.casefold(),
+            key=sort_themes,
         )
     ]
 
