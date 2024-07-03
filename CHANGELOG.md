@@ -2,6 +2,18 @@
 
 All notable changes to the **hush** extension will be documented in this file.
 
+## [1.5.0] - 2024-07-4
+
+### Minor Enhancements 💄
+
+- Improve distinction between inactive and active state by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/13
+- Integrate more colors of codelens and gitlens by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/14
+- Make colors more consistent in all file types by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/16
+
+### Other Changes
+
+- Prioritize base theme name in themes list by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/15
+
 ## [1.4.0] - 2024-06-24
 
 ### Minor Enhancements 💄
