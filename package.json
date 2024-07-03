@@ -32,14 +32,14 @@
   "contributes": {
     "themes": [
       {
-        "label": "Hush",
-        "uiTheme": "vs-dark",
-        "path": "themes/Hush-color-theme.json"
-      },
-      {
         "label": "Hush Nimbus",
         "uiTheme": "vs-dark",
         "path": "themes/Hush Nimbus-color-theme.json"
+      },
+      {
+        "label": "Hush",
+        "uiTheme": "vs-dark",
+        "path": "themes/Hush-color-theme.json"
       }
     ]
   }

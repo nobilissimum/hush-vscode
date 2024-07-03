@@ -528,6 +528,7 @@
           "constant.other.database-name.sql",
           "constant.other.table-name.sql",
           "keyword.control",
+          "keyword.other.directive.using.cs",
           "keyword.other.import.java",
           "meta.definition.variable.name.java",
           "storage.modifier.async.js",
