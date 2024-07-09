@@ -2,6 +2,16 @@
 
 All notable changes to the **hush** extension will be documented in this file.
 
+## [1.6.0] - 2024-07-09
+
+### Minor Enhancements 💄
+
+- Update color representation of find match and active terminal by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/18
+
+### Bug fixes 🔨
+
+- Fix release workflow by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/19
+
 ## [1.5.0] - 2024-07-4
 
 ### Minor Enhancements 💄
