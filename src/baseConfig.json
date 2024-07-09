@@ -1,7 +1,7 @@
 {
   "colors": {
     "$": {
-      "$": ["editor.findMatchHighlightForeground"]
+      "$": ["editor.findMatchHighlightForeground", "editor.findMatchForeground"]
     },
     "$debug": {
       "99": ["commandCenter.debuggingBackground"],
@@ -215,7 +215,7 @@
         "editorCursor.foreground",
         "editorSuggestWidget.selectedBackground",
         "list.activeSelectionBackground",
-        "list.inactiveFocusBackground",
+        "list.inactiveSelectionBackground",
         "panelTitle.activeBorder",
         "pickerGroup.border",
         "pickerGroup.foreground"
@@ -290,6 +290,7 @@
         "diffEditor.move.border",
         "diffEditor.moveActive.border",
         "dropdown.border",
+        "terminal.inactiveSelectionBackground",
         "editor.lineHighlightBorder",
         "editor.snippetFinalTabstopHighlightBorder",
         "editorBracketMatch.border",
@@ -313,6 +314,7 @@
         "keybindingLabel.border",
         "keybindingLabel.bottomBorder",
         "list.dropBackground",
+        "list.inactiveFocusBackground",
         "listFilterWidget.noMatchesOutline",
         "listFilterWidget.shadow",
         "menu.selectionBorder",
@@ -380,7 +382,6 @@
         "diffEditor.diagonalFill",
         "editorOverviewRuler.findMatchForeground",
         "gitlens.trailingLineForegroundColor",
-        "list.inactiveSelectionBackground",
         "sideBySideEditor.horizontalBorder",
         "sideBySideEditor.verticalBorder"
       ],
@@ -436,7 +437,6 @@
       ],
       "ee": [
         "activityBar.foreground",
-        "editor.findMatchForeground",
         "editorSuggestWidget.foreground",
         "editorSuggestWidget.highlightForeground",
         "input.foreground",
