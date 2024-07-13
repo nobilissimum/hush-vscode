@@ -2,6 +2,12 @@
 
 All notable changes to the **hush** extension will be documented in this file.
 
+## [1.7.0] - 2024-07-13
+
+### Minor Enhancements 💄
+
+- Change color red by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/21
+
 ## [1.6.0] - 2024-07-09
 
 ### Minor Enhancements 💄
