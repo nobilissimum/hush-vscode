@@ -2,6 +2,13 @@
 
 All notable changes to the **hush** extension will be documented in this file.
 
+## [1.7.1] - 2024-07-13
+
+### Other Changes
+
+- Update README by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/22
+- Use hush submodule for building themes by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/23
+
 ## [1.7.0] - 2024-07-13
 
 ### Minor Enhancements 💄
