@@ -3,19 +3,19 @@
     "$": {
       "$": ["editor.findMatchHighlightForeground", "editor.findMatchForeground"]
     },
-    "$debug": {
+    "debug": {
       "99": ["commandCenter.debuggingBackground"],
       "$": ["statusBar.debuggingBackground"]
     },
-    "$find": {
+    "find": {
       "33": ["editor.findMatchHighlightBackground"],
       "77": ["editor.findMatchBackground"],
       "dd": ["minimap.findMatchHighlight"]
     },
-    "$noFolder": {
+    "noFolder": {
       "$": ["statusBar.noFolderBackground"]
     },
-    "@fail": {
+    "fail": {
       "22": [
         "diffEditor.removedLineBackground",
         "diffEditorGutter.removedLineBackground",
@@ -55,7 +55,7 @@
         "minimapGutter.deletedBackground"
       ]
     },
-    "@info": {
+    "info": {
       "22": [
         "editor.wordHighlightStrongBackground",
         "errorLens.infoBackground",
@@ -93,7 +93,7 @@
         "textLink.activeForeground"
       ]
     },
-    "@success": {
+    "success": {
       "22": [
         "diffEditor.insertedLineBackground",
         "diffEditorGutter.insertedLineBackground",
@@ -129,7 +129,7 @@
         "textPreformat.foreground"
       ]
     },
-    "@warn": {
+    "warn": {
       "22": [
         "editorUnicodeHighlight.background",
         "errorLens.hintBackground",
@@ -167,7 +167,7 @@
         "list.warningForeground"
       ]
     },
-    "_dark": {
+    "dark": {
       "$": [
         "activityBar.background",
         "debugToolBar.background",
@@ -187,10 +187,10 @@
         "titleBar.inactiveBackground"
       ]
     },
-    "_light": {
+    "light": {
       "$": ["editor.background", "tab.activeBackground"]
     },
-    "_main": {
+    "main": {
       "$": [
         "editorGroupHeader.tabsBackground",
         "editorWidget.background",
@@ -221,7 +221,7 @@
         "pickerGroup.foreground"
       ]
     },
-    "black": {
+    "ansiBlack": {
       "22": [
         "chat.avatarBackground",
         "editor.findRangeHighlightBackground",
@@ -241,7 +241,7 @@
       "88": ["scrollbarSlider.activeBackground"],
       "$": ["terminal.ansiBlack"]
     },
-    "blue": {
+    "ansiBlue": {
       "77": ["textBlockQuote.border"],
       "$": [
         "editorBracketHighlight.foreground3",
@@ -250,14 +250,14 @@
         "terminal.ansiBrightBlue"
       ]
     },
-    "cyan": {
+    "ansiCyan": {
       "$": ["terminal.ansiCyan", "terminal.ansiBrightCyan"]
     },
-    "green": {
+    "ansiGreen": {
       "$": ["charts.green", "terminal.ansiGreen", "terminal.ansiBrightGreen"],
       "1a": ["diffEditor.insertedTextBackground"]
     },
-    "pink": {
+    "ansiRed": {
       "$": [
         "charts.red",
         "editorBracketHighlight.foreground2",
@@ -268,7 +268,7 @@
       ],
       "1a": ["diffEditor.removedTextBackground"]
     },
-    "purple": {
+    "ansiMagenta": {
       "$": [
         "charts.purple",
         "gitlens.closedAutolinkedIssueIconColor",
@@ -365,7 +365,7 @@
         "window.inactiveBorder"
       ]
     },
-    "white": {
+    "ansiWhite": {
       "11": ["editorBracketMatch.background", "tree.tableColumnsBorder"],
       "22": [
         "button.secondaryBackground",
@@ -448,7 +448,7 @@
       ],
       "ff": ["inputOption.activeForeground"]
     },
-    "yellow": {
+    "ansiYellow": {
       "$": [
         "charts.orange",
         "charts.yellow",
@@ -459,23 +459,23 @@
     }
   },
   "tokenColors": {
-    "@fail": [
+    "fail": [
       {
         "scope": ["markup.underline.error"]
       }
     ],
-    "@info": [
+    "info": [
       {
         "scope": ["markup.underline.info"]
       }
     ],
-    "@success": [],
-    "@warn": [
+    "success": [],
+    "warn": [
       {
         "scope": ["markup.underline.warning", "markup.underline.hint"]
       }
     ],
-    "blue": [
+    "ansiBlue": [
       {
         "scope": [
           "entity.name.function",
@@ -515,7 +515,7 @@
         "scope": ["markup.quote.markdown"]
       }
     ],
-    "pink": [
+    "ansiRed": [
       {
         "scope": ["token.error-token"]
       },
@@ -550,7 +550,7 @@
         ]
       }
     ],
-    "purple": [
+    "ansiMagenta": [
       {
         "scope": [
           "entity.name.tag",
@@ -625,7 +625,7 @@
         ]
       }
     ],
-    "white": [
+    "ansiWhite": [
       {
         "alpha": "ee",
         "scope": [
@@ -712,7 +712,7 @@
         "scope": ["comment", "string.quoted.docstring.multi.python"]
       }
     ],
-    "yellow": [
+    "ansiYellow": [
       {
         "scope": [
           "constant.numeric.css",
