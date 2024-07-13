@@ -1,0 +1,9 @@
+{
+  "debug": "#aa8352",
+  "find": "#dbd068",
+  "noFolder": "#3c88b9",
+  "fail": "#cc6e8f",
+  "info": "#74add2",
+  "success": "#65a884",
+  "warn": "#fffac2"
+}
