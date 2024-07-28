@@ -5,7 +5,7 @@
   "version": "1.7.1",
   "publisher": "nobilissimum",
   "author": "Ronn Angelo Lee <ronn.angelo.lee@gmail.com>",
-  "icon": "assets/icon.png",
+  "icon": "hush/assets/icon.png",
   "galleryBanner": {
     "color": "#202733",
     "theme": "dark"
