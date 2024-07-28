@@ -1,4 +1,8 @@
-<h3 align="center">Hush</h3>
+<p align="center">
+  <img alt="Hush Logo" src="hush/assets/logo.png" width="100" height="100">
+</p>
+
+<h3 align="center">Hush for <a href="https://code.visualstudio.com" target="_blank">Visual Studio Code</a></h3>
 
 <p align="center">A color theme for clarity and comfort.</p>
 
