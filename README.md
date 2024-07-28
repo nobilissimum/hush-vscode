@@ -1,4 +1,4 @@
-<h3 align="center">Hush</h3>
+<h3 align="center">Hush for <a href="https://code.visualstudio.com" target="_blank">Visual Studio Code</a></h3>
 
 <p align="center">A color theme for clarity and comfort.</p>
 
