@@ -26,3 +26,7 @@ src
 
 # Per-machine state
 .env
+
+# Submodule
+hush/*
+!hush/assets
