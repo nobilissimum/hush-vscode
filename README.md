@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Hush Logo" src="https://raw.githubusercontent.com/nobilissimum/hush/main/assets/logo.png" width="100" height="100">
+  <img alt="Hush Logo" src="assets/logo.png" width="100" height="100">
 </p>
 
 <h3 align="center">Hush for <a href="https://code.visualstudio.com" target="_blank">Visual Studio Code</a></h3>
