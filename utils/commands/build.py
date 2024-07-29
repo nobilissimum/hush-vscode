@@ -4,20 +4,16 @@ from os import scandir
 from pathlib import Path
 from typing import Any
 
-import tomllib
-
 from utils.settings import (
     COLOR_HEX_LENGTH,
     DIST_THEMES_DIRPATH,
-    HUSH_BASE_THEME_FILEPATH,
-    HUSH_VARIANT_THEMES_DIRPATH,
     INDENTATION,
     SRC_BASE_CONFIG_PATH,
     SRC_BASE_THEME_PATH,
+    SRC_VARIANT_THEMES_DIRPATH,
     THEME_FILE_EXTENSION,
     THEME_NAME,
 )
-from utils.utils import to_camel_case
 
 
 def get_color_hex(
@@ -90,8 +86,8 @@ def create_variant_theme(base_theme: dict, variant_path: Path | str) -> dict:
         variant_path = Path(variant_path)
 
     variant_theme: dict = base_theme.copy()
-    with variant_path.open("rb") as file:
-        variant_sub_theme: dict = tomllib.load(file)
+    with variant_path.open() as file:
+        variant_sub_theme: dict[str, str] = json.loads(file.read())
         for color_name, color_value in variant_sub_theme.items():
             variant_theme[color_name] = color_value
 
@@ -102,10 +98,6 @@ def main() -> None:
     theme_name: str = THEME_NAME
 
     base_theme: dict = {}
-    with Path(HUSH_BASE_THEME_FILEPATH).open("rb") as file:
-        for key, value in tomllib.load(file).items():
-            base_theme[to_camel_case(key)] = value
-
     with Path(SRC_BASE_THEME_PATH).open() as file:
         base_theme.update(json.loads(file.read()))
 
@@ -121,13 +113,13 @@ def main() -> None:
     )
 
     # Create variant themes
-    with scandir(HUSH_VARIANT_THEMES_DIRPATH) as directory_entries:
+    with scandir(SRC_VARIANT_THEMES_DIRPATH) as directory_entries:
         for entry in directory_entries:
             if not entry.is_file():
                 continue
 
             variant_path: Path = Path(entry)
-            if variant_path.suffix != ".toml":
+            if variant_path.suffix != ".json":
                 continue
 
             variant_theme: dict = create_variant_theme(base_theme, variant_path)
@@ -135,7 +127,7 @@ def main() -> None:
             create_theme_file(
                 variant_theme,
                 base_config,
-                f"{THEME_NAME} {variant_path.stem.capitalize()}",
+                f"{THEME_NAME} {variant_path.stem}",
             )
 
 
