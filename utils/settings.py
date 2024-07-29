@@ -2,9 +2,6 @@ import os
 
 from typing import Final
 
-HUSH_BASE_THEME_FILEPATH: Final[str] = "hush/colors.toml"
-HUSH_VARIANT_THEMES_DIRPATH: Final[str] = "hush/variants"
-
 SRC_CONFIG_DIRPATH: Final[str] = "src"
 DEV_DIRPATH: Final[str] = "utils"
 
@@ -12,6 +9,7 @@ DEFAULT_THEME_MODE: Final[str] = "vs-dark"
 
 COLOR_HEX_LENGTH: Final[int] = 9
 
+SRC_VARIANT_THEMES_DIRPATH: Final[str] = f"{SRC_CONFIG_DIRPATH}/variants"
 SRC_BASE_CONFIG_PATH: Final[str] = f"{SRC_CONFIG_DIRPATH}/config.json"
 SRC_BASE_THEME_PATH: Final[str] = f"{SRC_CONFIG_DIRPATH}/colors.json"
 
