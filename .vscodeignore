@@ -20,12 +20,15 @@ src
 .git
 .github
 .gitignore
+.gitmodules
 .vscode
 
 *.vsix
 
 # Per-machine state
 .env
+bun.lockb
+node_modules
 
 # Submodule
 hush/*
