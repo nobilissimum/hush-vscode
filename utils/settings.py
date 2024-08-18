@@ -23,7 +23,7 @@ LOG_LEVEL: str = os.environ.get("LOG_LEVEL", "WARNING")
 DEBOUNCE_INTERVAL: float = 1
 
 THEME_NAME: Final[str] = "Hush"
-THEME_FILE_EXTENSION: Final[str] = "-color-theme.json"
+THEME_FILE_EXTENSION: Final[str] = ".json"
 
 HIDDEN_COLORS_PATH: Final[str] = "colors.hidden.json"
 

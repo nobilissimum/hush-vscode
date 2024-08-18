@@ -77,7 +77,11 @@ def create_theme_file(
 
     dist_theme_dirpath: Path = Path(DIST_THEMES_DIRPATH)
     dist_theme_dirpath.mkdir(exist_ok=True)
-    with Path(f"{dist_theme_dirpath / name}{THEME_FILE_EXTENSION}").open("w") as file:
+    with Path(
+        f"{dist_theme_dirpath / name}"
+        f".{theme_type}"
+        f"{THEME_FILE_EXTENSION}",
+    ).open("w") as file:
         file.write(json.dumps(theme_file_content, indent=INDENTATION))
 
     return theme
