@@ -184,14 +184,18 @@
         "peekView.border",
         "peekViewResult.background",
         "peekViewTitle.background",
-        "scrollbarSlider.activeBackground",
-        "scrollbarSlider.background",
-        "scrollbarSlider.hoverBackground",
         "sideBarSectionHeader.background",
         "statusBar.background",
         "terminal.background",
         "titleBar.activeBackground",
         "titleBar.inactiveBackground"
+      ]
+    },
+    "dark77": {
+      "77": [
+        "scrollbarSlider.activeBackground",
+        "scrollbarSlider.background",
+        "scrollbarSlider.hoverBackground"
       ]
     },
     "light": {
@@ -231,15 +235,12 @@
     "ansiBlack": {
       "22": [
         "chat.avatarBackground",
-        "minimapSlider.background",
-        "minimapSlider.hoverBackground",
         "textBlockQuote.background"
       ],
       "33": [
         "list.hoverBackground",
         "menu.border",
-        "menu.separatorBackground",
-        "minimapSlider.activeBackground"
+        "menu.separatorBackground"
       ],
       "$": ["terminal.ansiBlack"]
     },
@@ -374,6 +375,13 @@
         "editorBracketHighlight.foreground1",
         "terminal.ansiBrightYellow",
         "terminal.ansiYellow"
+      ]
+    },
+    "main33": {
+      "33": [
+        "minimapSlider.activeBackground",
+        "minimapSlider.background",
+        "minimapSlider.hoverBackground"
       ]
     },
     "foreground": {
