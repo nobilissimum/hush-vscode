@@ -173,9 +173,6 @@
         "breadcrumb.background",
         "debugToolBar.background",
         "dropdown.background",
-        "editor.findRangeHighlightBackground",
-        "editor.lineHighlightBackground",
-        "editor.rangeHighlightBackground",
         "editorSuggestWidget.background",
         "editorSuggestWidget.border",
         "editorWidget.border",
@@ -203,6 +200,9 @@
     },
     "main": {
       "$": [
+        "editor.findRangeHighlightBackground",
+        "editor.lineHighlightBackground",
+        "editor.rangeHighlightBackground",
         "editorGroupHeader.tabsBackground",
         "editorWidget.background",
         "peekViewEditor.background",
