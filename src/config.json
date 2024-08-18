@@ -170,6 +170,7 @@
     "dark": {
       "$": [
         "activityBar.background",
+        "breadcrumb.background",
         "debugToolBar.background",
         "dropdown.background",
         "editor.findRangeHighlightBackground",
