@@ -172,6 +172,9 @@
         "activityBar.background",
         "debugToolBar.background",
         "dropdown.background",
+        "editor.findRangeHighlightBackground",
+        "editor.lineHighlightBackground",
+        "editor.rangeHighlightBackground",
         "editorSuggestWidget.background",
         "editorSuggestWidget.border",
         "editorWidget.border",
@@ -227,9 +230,6 @@
     "ansiBlack": {
       "22": [
         "chat.avatarBackground",
-        "editor.findRangeHighlightBackground",
-        "editor.lineHighlightBackground",
-        "editor.rangeHighlightBackground",
         "minimapSlider.background",
         "minimapSlider.hoverBackground",
         "textBlockQuote.background"
