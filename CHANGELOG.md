@@ -2,6 +2,20 @@
 
 All notable changes to the **hush** extension will be documented in this file.
 
+## [1.8.0] - 2024-08-18
+
+### Major Enhancements 🎉
+
+- Create light theme by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/30
+
+### Other Changes
+
+- Add logo to README by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/25
+- Update vscode icon path by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/26
+- Fix image source by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/27
+- Remove submodule hush by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/28
+- Add vsce as dependency by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/29
+
 ## [1.7.1] - 2024-07-13
 
 ### Other Changes
