@@ -9,9 +9,9 @@ DEFAULT_THEME_MODE: Final[str] = "vs-dark"
 
 COLOR_HEX_LENGTH: Final[int] = 9
 
-SRC_VARIANT_THEMES_DIRPATH: Final[str] = f"{SRC_CONFIG_DIRPATH}/variants"
-SRC_BASE_CONFIG_PATH: Final[str] = f"{SRC_CONFIG_DIRPATH}/config.json"
-SRC_BASE_THEME_PATH: Final[str] = f"{SRC_CONFIG_DIRPATH}/colors.json"
+SRC_VARIANT_THEMES_DIR: Final[str] = "variants"
+SRC_BASE_CONFIG_FILENAME: Final[str] = "config.json"
+SRC_BASE_THEME_FILENAME: Final[str] = "colors.json"
 
 DIST_THEMES_DIRPATH: Final[str] = "themes"
 
@@ -23,7 +23,7 @@ LOG_LEVEL: str = os.environ.get("LOG_LEVEL", "WARNING")
 DEBOUNCE_INTERVAL: float = 1
 
 THEME_NAME: Final[str] = "Hush"
-THEME_FILE_EXTENSION: Final[str] = "-color-theme.json"
+THEME_FILE_EXTENSION: Final[str] = ".json"
 
 HIDDEN_COLORS_PATH: Final[str] = "colors.hidden.json"
 

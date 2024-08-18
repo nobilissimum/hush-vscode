@@ -1,6 +1,7 @@
+themes
+
 *.vsix
 *.hidden*
-*-color-theme.json
 
 # Python
 Pipfile.lock

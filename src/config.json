@@ -170,6 +170,7 @@
     "dark": {
       "$": [
         "activityBar.background",
+        "breadcrumb.background",
         "debugToolBar.background",
         "dropdown.background",
         "editorSuggestWidget.background",
@@ -187,11 +188,21 @@
         "titleBar.inactiveBackground"
       ]
     },
+    "dark77": {
+      "77": [
+        "scrollbarSlider.activeBackground",
+        "scrollbarSlider.background",
+        "scrollbarSlider.hoverBackground"
+      ]
+    },
     "light": {
       "$": ["editor.background", "tab.activeBackground"]
     },
     "main": {
       "$": [
+        "editor.findRangeHighlightBackground",
+        "editor.lineHighlightBackground",
+        "editor.rangeHighlightBackground",
         "editorGroupHeader.tabsBackground",
         "editorWidget.background",
         "peekViewEditor.background",
@@ -224,21 +235,13 @@
     "ansiBlack": {
       "22": [
         "chat.avatarBackground",
-        "editor.findRangeHighlightBackground",
-        "editor.lineHighlightBackground",
-        "editor.rangeHighlightBackground",
-        "minimapSlider.background",
-        "minimapSlider.hoverBackground",
         "textBlockQuote.background"
       ],
       "33": [
         "list.hoverBackground",
         "menu.border",
-        "menu.separatorBackground",
-        "minimapSlider.activeBackground"
+        "menu.separatorBackground"
       ],
-      "66": ["scrollbarSlider.background", "scrollbarSlider.hoverBackground"],
-      "88": ["scrollbarSlider.activeBackground"],
       "$": ["terminal.ansiBlack"]
     },
     "ansiBlue": {
@@ -365,7 +368,23 @@
         "window.inactiveBorder"
       ]
     },
-    "ansiWhite": {
+    "ansiYellow": {
+      "$": [
+        "charts.orange",
+        "charts.yellow",
+        "editorBracketHighlight.foreground1",
+        "terminal.ansiBrightYellow",
+        "terminal.ansiYellow"
+      ]
+    },
+    "main33": {
+      "33": [
+        "minimapSlider.activeBackground",
+        "minimapSlider.background",
+        "minimapSlider.hoverBackground"
+      ]
+    },
+    "foreground": {
       "11": ["editorBracketMatch.background", "tree.tableColumnsBorder"],
       "22": [
         "button.secondaryBackground",
@@ -447,15 +466,6 @@
         "tab.activeForeground"
       ],
       "ff": ["inputOption.activeForeground"]
-    },
-    "ansiYellow": {
-      "$": [
-        "charts.orange",
-        "charts.yellow",
-        "editorBracketHighlight.foreground1",
-        "terminal.ansiBrightYellow",
-        "terminal.ansiYellow"
-      ]
     }
   },
   "tokenColors": {
@@ -625,7 +635,77 @@
         ]
       }
     ],
-    "ansiWhite": [
+    "ansiYellow": [
+      {
+        "scope": [
+          "constant.numeric.css",
+          "entity.name.type.class",
+          "entity.name.type.cs",
+          "entity.name.type.instance",
+          "entity.name.type.interface.ts",
+          "entity.name.type.module.js",
+          "entity.name.type.module.ts",
+          "entity.name.type.module.tsx",
+          "entity.other.attribute-name",
+          "entity.other.inherited-class",
+          "support.class",
+          "support.constant.json.js",
+          "support.constant.json.comments.js",
+          "support.constant.json.ts",
+          "support.constant.json.comments.ts",
+          "support.constant.json.tsx",
+          "support.constant.json.comments.tsx",
+          "support.constant.property-value.css",
+          "support.constant.property-value.scss",
+          "support.constant.property.math",
+          "support.variable.dom.js",
+          "support.variable.dom.ts",
+          "support.variable.dom.tsx",
+          "support.variable.object.node.js",
+          "support.variable.object.node.ts",
+          "support.variable.object.node.tsx",
+          "support.variable.object.process.js",
+          "support.variable.object.process.ts",
+          "support.variable.object.process.tsx",
+          "support.variable.property.process.js",
+          "support.variable.property.process.ts",
+          "support.variable.property.process.tsx",
+          "constant.numeric",
+          "keyword.other.unit",
+          "variable.parameter.function"
+        ]
+      },
+      {
+        "scope": ["token.warn-token"]
+      },
+      {
+        "scope": [
+          "variable.language.special.self.python",
+          "variable.language.super",
+          "variable.language.this.js",
+          "variable.language.this.ts",
+          "variable.language.this.tsx"
+        ]
+      },
+      {
+        "scope": [
+          "entity.name.section.markdown",
+          "meta.object-literal.key",
+          "source.coffee.embedded.source",
+          "string.interpolated.jade",
+          "string.quoted",
+          "string.template.js",
+          "string.template.ts",
+          "string.template.tsx",
+          "string.unquoted.plain.out.yaml"
+        ]
+      },
+      {
+        "fontStyle": "bold",
+        "scope": ["markup.bold.markdown"]
+      }
+    ],
+    "foreground": [
       {
         "alpha": "ee",
         "scope": [
@@ -710,76 +790,6 @@
         "alpha": 92,
         "fontStyle": "italic",
         "scope": ["comment", "string.quoted.docstring.multi.python"]
-      }
-    ],
-    "ansiYellow": [
-      {
-        "scope": [
-          "constant.numeric.css",
-          "entity.name.type.class",
-          "entity.name.type.cs",
-          "entity.name.type.instance",
-          "entity.name.type.interface.ts",
-          "entity.name.type.module.js",
-          "entity.name.type.module.ts",
-          "entity.name.type.module.tsx",
-          "entity.other.attribute-name",
-          "entity.other.inherited-class",
-          "support.class",
-          "support.constant.json.js",
-          "support.constant.json.comments.js",
-          "support.constant.json.ts",
-          "support.constant.json.comments.ts",
-          "support.constant.json.tsx",
-          "support.constant.json.comments.tsx",
-          "support.constant.property-value.css",
-          "support.constant.property-value.scss",
-          "support.constant.property.math",
-          "support.variable.dom.js",
-          "support.variable.dom.ts",
-          "support.variable.dom.tsx",
-          "support.variable.object.node.js",
-          "support.variable.object.node.ts",
-          "support.variable.object.node.tsx",
-          "support.variable.object.process.js",
-          "support.variable.object.process.ts",
-          "support.variable.object.process.tsx",
-          "support.variable.property.process.js",
-          "support.variable.property.process.ts",
-          "support.variable.property.process.tsx",
-          "constant.numeric",
-          "keyword.other.unit",
-          "variable.parameter.function"
-        ]
-      },
-      {
-        "scope": ["token.warn-token"]
-      },
-      {
-        "scope": [
-          "variable.language.special.self.python",
-          "variable.language.super",
-          "variable.language.this.js",
-          "variable.language.this.ts",
-          "variable.language.this.tsx"
-        ]
-      },
-      {
-        "scope": [
-          "entity.name.section.markdown",
-          "meta.object-literal.key",
-          "source.coffee.embedded.source",
-          "string.interpolated.jade",
-          "string.quoted",
-          "string.template.js",
-          "string.template.ts",
-          "string.template.tsx",
-          "string.unquoted.plain.out.yaml"
-        ]
-      },
-      {
-        "fontStyle": "bold",
-        "scope": ["markup.bold.markdown"]
       }
     ]
   }

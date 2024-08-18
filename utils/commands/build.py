@@ -8,9 +8,10 @@ from utils.settings import (
     COLOR_HEX_LENGTH,
     DIST_THEMES_DIRPATH,
     INDENTATION,
-    SRC_BASE_CONFIG_PATH,
-    SRC_BASE_THEME_PATH,
-    SRC_VARIANT_THEMES_DIRPATH,
+    SRC_BASE_CONFIG_FILENAME,
+    SRC_BASE_THEME_FILENAME,
+    SRC_CONFIG_DIRPATH,
+    SRC_VARIANT_THEMES_DIR,
     THEME_FILE_EXTENSION,
     THEME_NAME,
 )
@@ -30,6 +31,7 @@ def get_color_hex(
 
 def create_theme_file(
     theme: dict,
+    theme_type: str,
     config: dict,
     name: str,
 ) -> dict:
@@ -69,13 +71,17 @@ def create_theme_file(
             token_color["settings"] = settings
             theme_token_colors.append(token_color)
 
-    theme_file_content: dict[str, Any] = {}
+    theme_file_content: dict[str, Any] = {"type": theme_type}
     theme_file_content["colors"] = dict(sorted(theme_colors.items()))
     theme_file_content["tokenColors"] = theme_token_colors
 
     dist_theme_dirpath: Path = Path(DIST_THEMES_DIRPATH)
     dist_theme_dirpath.mkdir(exist_ok=True)
-    with Path(f"{dist_theme_dirpath / name}{THEME_FILE_EXTENSION}").open("w") as file:
+    with Path(
+        f"{dist_theme_dirpath / name}"
+        f".{theme_type}"
+        f"{THEME_FILE_EXTENSION}",
+    ).open("w") as file:
         file.write(json.dumps(theme_file_content, indent=INDENTATION))
 
     return theme
@@ -97,38 +103,52 @@ def create_variant_theme(base_theme: dict, variant_path: Path | str) -> dict:
 def main() -> None:
     theme_name: str = THEME_NAME
 
-    base_theme: dict = {}
-    with Path(SRC_BASE_THEME_PATH).open() as file:
-        base_theme.update(json.loads(file.read()))
-
+    src_config_dirpath: Path = Path(SRC_CONFIG_DIRPATH)
     base_config: dict
-    with Path(SRC_BASE_CONFIG_PATH).open() as file:
+    with Path(src_config_dirpath / SRC_BASE_CONFIG_FILENAME).open() as file:
         base_config = json.loads(file.read())
 
-    # Create base theme
-    create_theme_file(
-        base_theme,
-        base_config,
-        theme_name,
-    )
-
-    # Create variant themes
-    with scandir(SRC_VARIANT_THEMES_DIRPATH) as directory_entries:
-        for entry in directory_entries:
-            if not entry.is_file():
+    with scandir(src_config_dirpath) as type_entries:
+        for type_entry in type_entries:
+            if not type_entry.is_dir():
                 continue
 
-            variant_path: Path = Path(entry)
-            if variant_path.suffix != ".json":
-                continue
+            type_name: str = type_entry.name
+            type_dirpath: Path = Path(type_entry)
+            base_theme: dict = {}
+            with Path(type_dirpath / SRC_BASE_THEME_FILENAME).open() as file:
+                base_theme.update(json.loads(file.read()))
 
-            variant_theme: dict = create_variant_theme(base_theme, variant_path)
-
+            # Create base theme
             create_theme_file(
-                variant_theme,
+                base_theme,
+                type_name,
                 base_config,
-                f"{THEME_NAME} {variant_path.stem}",
+                theme_name,
             )
+
+            # Create variant themes
+            variants_dirpath: Path = type_dirpath / SRC_VARIANT_THEMES_DIR
+            if not variants_dirpath.exists():
+                continue
+
+            with scandir(type_dirpath / SRC_VARIANT_THEMES_DIR) as directory_entries:
+                for directory_entry in directory_entries:
+                    if not directory_entry.is_file():
+                        continue
+
+                    variant_path: Path = Path(directory_entry)
+                    if variant_path.suffix != ".json":
+                        continue
+
+                    variant_theme: dict = create_variant_theme(base_theme, variant_path)
+
+                    create_theme_file(
+                        variant_theme,
+                        type_name,
+                        base_config,
+                        f"{THEME_NAME} {variant_path.stem}",
+                    )
 
 
 if __name__ == "__main__":
