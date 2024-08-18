@@ -180,6 +180,9 @@
         "peekView.border",
         "peekViewResult.background",
         "peekViewTitle.background",
+        "scrollbarSlider.activeBackground",
+        "scrollbarSlider.background",
+        "scrollbarSlider.hoverBackground",
         "sideBarSectionHeader.background",
         "statusBar.background",
         "terminal.background",
@@ -237,8 +240,6 @@
         "menu.separatorBackground",
         "minimapSlider.activeBackground"
       ],
-      "66": ["scrollbarSlider.background", "scrollbarSlider.hoverBackground"],
-      "88": ["scrollbarSlider.activeBackground"],
       "$": ["terminal.ansiBlack"]
     },
     "ansiBlue": {
