@@ -12,6 +12,7 @@
   "debug": "#aa8352",
   "fail": "#cc6e8f",
   "find": "#dbd068",
+  "foreground": "#ffffff",
   "info": "#74add2",
   "light": "#202733",
   "main": "#1d232e",
