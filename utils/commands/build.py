@@ -4,7 +4,7 @@ from enum import Enum
 from os import scandir
 from pathlib import Path
 from re import Pattern, compile
-from typing import Any, Self
+from typing import Any, Final, Self
 
 from utils.settings import (
     COLOR_HEX_LENGTH,
@@ -19,6 +19,13 @@ from utils.settings import (
 )
 
 BASE_COLOR_PATTERN: Pattern = compile(r"^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})$")
+ALPHA_COLOR_PATTERN: Pattern = compile(r"^[A-Fa-f0-9]{2}")
+
+HEX_LENGTH: Final[int] = 2
+RGB_HEX_LENGTH: Final[int] = 6
+
+HEX_BASE: Final[int] = 16
+HEX_MAX: Final[int] = 255
 
 
 class UiTheme(Enum):
@@ -31,40 +38,87 @@ class UiTheme(Enum):
 
 class Color:
     base: str
+    alpha = ""
+
+    base_alpha: float
     extra: str
-    extra_alpha: float
 
     def __init__(
         self,
         base: str,
+        alpha: str = "",
+        base_alpha: str = "",
         extra: str = "",
-        extra_alpha: float = 1.0,
     ) -> None:
         if not BASE_COLOR_PATTERN.match(base):
             error_message: str = "The base color should be hexadecimal"
-            raise ValueError(error_message)
+            raise AssertionError(error_message)
 
-        base = base[:7]
-
-        if extra:
-            extra = extra[:7]
-            if not BASE_COLOR_PATTERN.match(extra):
-                error_message: str = "The extra color should be hexadecimal"
-                raise ValueError(error_message)
+        base = base[: RGB_HEX_LENGTH + 1]
+        alpha = alpha[:HEX_LENGTH]
+        extra, base_alpha = self.validate_extra(extra, base_alpha)
 
         self.base = base
+        self.alpha = alpha
+        self.base_alpha = base_alpha
         self.extra = extra
-        self.extra_alpha = extra_alpha
 
     def __str__(self) -> str:
         return self.value
 
+    def validate_alpha(self, alpha: str) -> str:
+        if not alpha:
+            return alpha
+
+        if not ALPHA_COLOR_PATTERN.match(alpha):
+            error_message: str = "The alpha should be hexadecimal"
+            raise AssertionError(error_message)
+
+        return alpha[:HEX_LENGTH]
+
+    def validate_extra(self, extra: str, base_alpha: str) -> tuple[str, str]:
+        if not extra:
+            return extra, base_alpha
+
+        extra = extra[: RGB_HEX_LENGTH + 1]
+        if not BASE_COLOR_PATTERN.match(extra):
+            error_message: str = "The extra color should be hexadecimal"
+            raise AssertionError(error_message)
+
+        base_alpha = base_alpha[:HEX_LENGTH]
+        if not ALPHA_COLOR_PATTERN.match(base_alpha):
+            error_message: str = "The base alpha should be hexadecimal"
+            raise AssertionError(error_message)
+
+        return extra, base_alpha
+
     @property
     def value(self) -> str:
-        if not self.overlay:
-            return self.base
+        if not self.extra:
+            return f"{self.base}{self.alpha}"
 
-        return self.base
+        base_hex: str = self.base[1:]
+        bases: tuple[int, int, int] = tuple(
+            int(self.base[1:][i : i + HEX_LENGTH], HEX_BASE)
+            for i in range(0, len(base_hex), HEX_LENGTH)
+        )
+
+        extra_hex: str = self.extra[1:]
+
+        base_alpha_hex: int = int(self.base_alpha, HEX_BASE)
+        base_alpha: int = base_alpha_hex / HEX_MAX
+        extra_alpha: int = (HEX_MAX - base_alpha_hex) / HEX_MAX
+
+        extras: tuple[int, int, int] = tuple(
+            int(self.extra[1:][i : i + HEX_LENGTH], HEX_BASE) * extra_alpha
+            for i in range(0, len(extra_hex), HEX_LENGTH)
+        )
+
+        bases = tuple(
+            hex(round((base - extras[index]) / base_alpha))[2:]
+            for index, base in enumerate(bases)
+        )
+        return f"#{''.join(bases)}{self.base_alpha}"
 
 
 class Theme:
