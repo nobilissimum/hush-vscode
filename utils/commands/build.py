@@ -132,11 +132,15 @@ class Theme:
 
     def __init__(
         self,
+        ui_theme: UiTheme,
         theme_colors: dict | None = None,
         theme_config: dict | None = None,
+        variant_name: str = "",
     ) -> None:
-        self._theme_colors = theme_colors or {}
-        self._theme_config = theme_config or {}
+        self.ui_theme = ui_theme
+        self.variant_name = variant_name
+        self.theme_colors = theme_colors or {}
+        self.theme_config = theme_config or {}
 
     def set_theme_colors(self, theme_colors: dict) -> Self:
         self.theme_colors = {**self.theme_colors, **theme_colors}
@@ -144,14 +148,6 @@ class Theme:
 
     def set_theme_config(self, theme_config: dict) -> Self:
         self.theme_config = theme_config
-        return self
-
-    def set_variant_name(self, variant_name: str) -> Self:
-        self.variant_name = variant_name
-        return self
-
-    def set_ui_theme(self, ui_theme: UiTheme) -> Self:
-        self.ui_theme = ui_theme
         return self
 
     def build_colors(self) -> None:
@@ -187,16 +183,22 @@ class Theme:
             )
             raise AssertionError(msg)
 
+        ui_theme: str = self.ui_theme.value
         theme: dict = {
-            "type": self.ui_theme,
+            "type": ui_theme,
             "colors": self.colors,
             "tokenColors": self.token_colors,
         }
 
         dist_theme_dirpath: Path = Path(DIST_THEMES_DIRPATH)
         dist_theme_dirpath.mkdir(exist_ok=True)
+
+        name: str = THEME_NAME
+        if self.variant_name:
+            name = f"{name.capitalize()} {self.variant_name.capitalize()}"
+
         with Path(
-            f"{dist_theme_dirpath / self.name}.{self.ui_theme}{THEME_FILE_EXTENSION}",
+            f"{dist_theme_dirpath / name}.{ui_theme}{THEME_FILE_EXTENSION}",
         ).open("w") as file:
             file.write(json.dumps(theme, indent=INDENTATION))
 
