@@ -1,8 +1,10 @@
 import json
 
+from enum import Enum
 from os import scandir
 from pathlib import Path
-from typing import Any
+from re import Pattern, compile
+from typing import Any, Self
 
 from utils.settings import (
     COLOR_HEX_LENGTH,
@@ -15,6 +17,125 @@ from utils.settings import (
     THEME_FILE_EXTENSION,
     THEME_NAME,
 )
+
+BASE_COLOR_PATTERN: Pattern = compile(r"^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})$")
+
+
+class UiTheme(Enum):
+    LIGHT = "light"
+    DARK = "dark"
+
+    def __str__(self) -> str:
+        return self.value
+
+
+class Color:
+    base: str
+    extra: str
+    extra_alpha: float
+
+    def __init__(
+        self,
+        base: str,
+        extra: str = "",
+        extra_alpha: float = 1.0,
+    ) -> None:
+        if not BASE_COLOR_PATTERN.match(base):
+            error_message: str = "The base color should be hexadecimal"
+            raise ValueError(error_message)
+
+        base = base[:7]
+
+        if extra:
+            extra = extra[:7]
+            if not BASE_COLOR_PATTERN.match(extra):
+                error_message: str = "The extra color should be hexadecimal"
+                raise ValueError(error_message)
+
+        self.base = base
+        self.extra = extra
+        self.extra_alpha = extra_alpha
+
+    def __str__(self) -> str:
+        return self.value
+
+    @property
+    def value(self) -> str:
+        if not self.overlay:
+            return self.base
+
+        return self.base
+
+
+class Theme:
+    theme_colors: dict
+    theme_config: dict
+
+    variant_name: str
+    ui_theme: UiTheme
+    colors: dict
+    token_colors: dict
+
+    def __init__(
+        self,
+        theme_colors: dict | None = None,
+        theme_config: dict | None = None,
+    ) -> None:
+        self._theme_colors = theme_colors or {}
+        self._theme_config = theme_config or {}
+
+    def set_theme_colors(self, theme_colors: dict) -> Self:
+        self.theme_colors = {**self.theme_colors, **theme_colors}
+        return self
+
+    def set_theme_config(self, theme_config: dict) -> Self:
+        self.theme_config = theme_config
+        return self
+
+    def set_variant_name(self, variant_name: str) -> Self:
+        self.variant_name = variant_name
+        return self
+
+    def set_ui_theme(self, ui_theme: UiTheme) -> Self:
+        self.ui_theme = ui_theme
+        return self
+
+    def build_colors(self) -> None:
+        pass
+
+    def build_token_colors(self) -> None:
+        pass
+
+    def build(self) -> None:
+        self.build_colors()
+        self.build_token_colors()
+
+    def create_file(self) -> None:
+        if not self.colors:
+            msg: str = (
+                f"Theme  {self.variant_name}:{self.ui_theme} has no configured colors"
+            )
+            raise AssertionError(msg)
+
+        if not self.token_colors:
+            msg: str = (
+                f"Theme  {self.variant_name}:{self.ui_theme}"
+                "has no configured token colors"
+            )
+            raise AssertionError(msg)
+
+        theme: dict = {
+            "type": self.ui_theme,
+            "colors": self.colors,
+            "tokenColors": self.token_colors,
+        }
+
+        dist_theme_dirpath: Path = Path(DIST_THEMES_DIRPATH)
+        dist_theme_dirpath.mkdir(exist_ok=True)
+        with Path(
+            f"{dist_theme_dirpath / self.name}.{self.ui_theme}{THEME_FILE_EXTENSION}",
+        ).open("w") as file:
+            file.write(json.dumps(theme, indent=INDENTATION))
 
 
 def get_color_hex(
@@ -78,9 +199,7 @@ def create_theme_file(
     dist_theme_dirpath: Path = Path(DIST_THEMES_DIRPATH)
     dist_theme_dirpath.mkdir(exist_ok=True)
     with Path(
-        f"{dist_theme_dirpath / name}"
-        f".{theme_type}"
-        f"{THEME_FILE_EXTENSION}",
+        f"{dist_theme_dirpath / name}.{theme_type}{THEME_FILE_EXTENSION}",
     ).open("w") as file:
         file.write(json.dumps(theme_file_content, indent=INDENTATION))
 
