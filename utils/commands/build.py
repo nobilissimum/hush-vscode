@@ -38,7 +38,7 @@ class UiTheme(Enum):
 
 class Color:
     base: str
-    alpha = ""
+    alpha: str
 
     base_alpha: float
     extra: str
@@ -153,7 +153,7 @@ class Theme:
     def build_colors(self) -> None:
         colors: dict[str, str] = {}
 
-        for color_name, color_variants in self.theme_config.items():
+        for color_name, color_variants in self.theme_config["colors"].items():
             for alpha, scopes in color_variants.items():
                 color: Color = Color(self.theme_colors[color_name], alpha)
 
@@ -163,7 +163,31 @@ class Theme:
         self.colors = colors
 
     def build_token_colors(self) -> None:
-        pass
+        token_colors: dict = {}
+
+        for color_name, color_config_groups in self.theme_config["tokenColors"].items():
+            base_color_hex: str = self.theme_colors[color_name]
+
+            for color_config_group in color_config_groups:
+                token_color = {}
+                settings = {}
+
+                config_group_scope = color_config_group["scope"]
+                config_group_scope.sort()
+                token_color["scope"] = config_group_scope
+
+                color_alpha = color_config_group.get("alpha", "ff")
+                color_hex = f"{base_color_hex}{color_alpha}"[:COLOR_HEX_LENGTH].upper()
+                settings["foreground"] = color_hex
+
+                font_style = color_config_group.get("fontStyle")
+                if font_style:
+                    settings["fontStyle"] = font_style
+
+                token_color["settings"] = settings
+                token_colors.append(token_color)
+
+        self.token_colors = token_colors
 
     def build(self) -> None:
         self.build_colors()
