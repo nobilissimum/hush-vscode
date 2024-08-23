@@ -28,7 +28,7 @@
       "source.fixAll": "always",
       "source.organizeImports": "always"
     },
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.detectIndentation": false,
     "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
