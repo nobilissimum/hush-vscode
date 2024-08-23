@@ -118,7 +118,7 @@ class Color:
             hex(round((base - extras[index]) / base_alpha))[2:]
             for index, base in enumerate(bases)
         )
-        return f"#{''.join(bases)}{self.base_alpha}"
+        return f"#{''.join(bases)}{self.base_alpha}".lower()
 
 
 class Theme:
@@ -155,7 +155,16 @@ class Theme:
         return self
 
     def build_colors(self) -> None:
-        pass
+        colors: dict[str, str] = {}
+
+        for color_name, color_variants in self.theme_config.items():
+            for alpha, scopes in color_variants.items():
+                color: Color = Color(self.theme_colors[color_name], alpha)
+
+                for color_scope in scopes:
+                    colors[color_scope] = color.value
+
+        self.colors = colors
 
     def build_token_colors(self) -> None:
         pass
