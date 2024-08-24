@@ -184,6 +184,7 @@ class Theme:
                     colors[color_scope] = color.value
 
         self.colors = colors
+        return self
 
     def build_token_colors(self) -> None:
         token_colors: dict = []
@@ -211,11 +212,12 @@ class Theme:
                 token_colors.append(token_color)
 
         self.token_colors = token_colors
+        return self
 
     def build(self) -> Self:
         self.build_colors()
         self.build_token_colors()
-        return Self
+        return self
 
     def create_file(self) -> Self:
         if not self.colors:
@@ -270,9 +272,9 @@ def main() -> None:
             with Path(type_dirpath / SRC_BASE_COLORS_FILENAME).open() as file:
                 colors.update(json.loads(file.read()))
 
-            theme = Theme(UiTheme[type_name.upper()], colors, config)
-            theme.build()
-            theme.create_file()
+            theme = (
+                Theme(UiTheme[type_name.upper()], colors, config).build().create_file()
+            )
 
             # Create variant themes
             variants_dirpath: Path = type_dirpath / SRC_VARIANT_THEMES_DIR
@@ -292,11 +294,13 @@ def main() -> None:
                     with variant_path.open() as file:
                         variant_colors: dict = json.loads(file.read())
 
-                    variant_theme = copy(theme)
-                    variant_theme.set_variant_name(variant_path.stem)
-                    variant_theme.set_theme_colors(variant_colors)
-                    variant_theme.build()
-                    variant_theme.create_file()
+                    (
+                        copy(theme)
+                        .set_variant_name(variant_path.stem)
+                        .set_theme_colors(variant_colors)
+                        .build()
+                        .create_file()
+                    )
 
 
 if __name__ == "__main__":
