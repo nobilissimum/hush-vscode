@@ -1,28 +1,32 @@
 import json
 
+from copy import copy
 from enum import Enum
 from os import scandir
 from pathlib import Path
 from re import Pattern, compile
-from typing import Any, Final, Self
+from typing import Final, Self
 
 from utils.settings import (
     COLOR_HEX_LENGTH,
     DIST_THEMES_DIRPATH,
     INDENTATION,
+    SRC_BASE_COLORS_FILENAME,
     SRC_BASE_CONFIG_FILENAME,
-    SRC_BASE_THEME_FILENAME,
     SRC_CONFIG_DIRPATH,
     SRC_VARIANT_THEMES_DIR,
     THEME_FILE_EXTENSION,
     THEME_NAME,
 )
 
-BASE_COLOR_PATTERN: Pattern = compile(r"^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6})$")
+BASE_COLOR_PATTERN: Pattern = compile(
+    r"^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6}|[A-Fa-f0-9]{8})$|^$",
+)
 ALPHA_COLOR_PATTERN: Pattern = compile(r"^[A-Fa-f0-9]{2}")
 
 HEX_LENGTH: Final[int] = 2
 RGB_HEX_LENGTH: Final[int] = 6
+RGB_HEX_LENGTH_SHORT: Final[int] = 3
 
 HEX_BASE: Final[int] = 16
 HEX_MAX: Final[int] = 255
@@ -51,12 +55,24 @@ class Color:
         extra: str = "",
     ) -> None:
         if not BASE_COLOR_PATTERN.match(base):
-            error_message: str = "The base color should be hexadecimal"
+            error_message: str = f"The base color {base} should be hexadecimal"
             raise AssertionError(error_message)
 
-        base = base[: RGB_HEX_LENGTH + 1]
-        alpha = alpha[:HEX_LENGTH]
+        base_length: int = len(base)
+        base_length_index: int
+        if base_length >= RGB_HEX_LENGTH:
+            base_length_index = RGB_HEX_LENGTH + 1
+        elif base_length >= RGB_HEX_LENGTH_SHORT:
+            base_length_index = RGB_HEX_LENGTH_SHORT + 1
+        else:
+            base_length_index = 0
+
+        base = base[:base_length_index]
         extra, base_alpha = self.validate_extra(extra, base_alpha)
+
+        alpha = alpha[:HEX_LENGTH]
+        if alpha == "$":
+            alpha = ""
 
         self.base = base
         self.alpha = alpha
@@ -93,7 +109,10 @@ class Color:
         return extra, base_alpha
 
     @property
-    def value(self) -> str:
+    def value(self) -> str | None:
+        if not self.base:
+            return None
+
         if not self.extra:
             return f"{self.base}{self.alpha}"
 
@@ -128,7 +147,7 @@ class Theme:
     variant_name: str
     ui_theme: UiTheme
     colors: dict
-    token_colors: dict
+    token_colors: list
 
     def __init__(
         self,
@@ -150,12 +169,16 @@ class Theme:
         self.theme_config = theme_config
         return self
 
+    def set_variant_name(self, variant_name: str) -> Self:
+        self.variant_name = variant_name
+        return self
+
     def build_colors(self) -> None:
         colors: dict[str, str] = {}
 
         for color_name, color_variants in self.theme_config["colors"].items():
             for alpha, scopes in color_variants.items():
-                color: Color = Color(self.theme_colors[color_name], alpha)
+                color: Color = Color(self.theme_colors.get(color_name, ""), alpha)
 
                 for color_scope in scopes:
                     colors[color_scope] = color.value
@@ -163,7 +186,7 @@ class Theme:
         self.colors = colors
 
     def build_token_colors(self) -> None:
-        token_colors: dict = {}
+        token_colors: dict = []
 
         for color_name, color_config_groups in self.theme_config["tokenColors"].items():
             base_color_hex: str = self.theme_colors[color_name]
@@ -189,11 +212,12 @@ class Theme:
 
         self.token_colors = token_colors
 
-    def build(self) -> None:
+    def build(self) -> Self:
         self.build_colors()
         self.build_token_colors()
+        return Self
 
-    def create_file(self) -> None:
+    def create_file(self) -> Self:
         if not self.colors:
             msg: str = (
                 f"Theme  {self.variant_name}:{self.ui_theme} has no configured colors"
@@ -226,95 +250,14 @@ class Theme:
         ).open("w") as file:
             file.write(json.dumps(theme, indent=INDENTATION))
 
-
-def get_color_hex(
-    theme: dict,
-    color_name: str,
-    alpha: str,
-) -> str | None:
-    if color_name == "$":
-        return None
-
-    color_alpha: str = alpha if alpha != "$" else ""
-    return f"{theme[color_name]}{color_alpha}"[:COLOR_HEX_LENGTH].upper()
-
-
-def create_theme_file(
-    theme: dict,
-    theme_type: str,
-    config: dict,
-    name: str,
-) -> dict:
-    theme_colors = {}
-    theme_token_colors = []
-
-    # Handle `colors`
-    colors: dict[str, dict[str, list[str]]] = config["colors"]
-    for color_name, variants in colors.items():
-        for alpha, color_scopes in variants.items():
-            color_hex = get_color_hex(theme, color_name, alpha)
-
-            for color_scope in color_scopes:
-                theme_colors[color_scope] = color_hex
-
-    # Handle `tokenColors`
-    token_colors: dict[str, list[dict[str, str | list[str]]]] = config["tokenColors"]
-    for color_name, color_config_groups in token_colors.items():
-        base_color_hex: str = theme[color_name]
-
-        for color_config_group in color_config_groups:
-            token_color = {}
-            settings = {}
-
-            config_group_scope = color_config_group["scope"]
-            config_group_scope.sort()
-            token_color["scope"] = config_group_scope
-
-            color_alpha = color_config_group.get("alpha", "ff")
-            color_hex = f"{base_color_hex}{color_alpha}"[:COLOR_HEX_LENGTH].upper()
-            settings["foreground"] = color_hex
-
-            font_style = color_config_group.get("fontStyle")
-            if font_style:
-                settings["fontStyle"] = font_style
-
-            token_color["settings"] = settings
-            theme_token_colors.append(token_color)
-
-    theme_file_content: dict[str, Any] = {"type": theme_type}
-    theme_file_content["colors"] = dict(sorted(theme_colors.items()))
-    theme_file_content["tokenColors"] = theme_token_colors
-
-    dist_theme_dirpath: Path = Path(DIST_THEMES_DIRPATH)
-    dist_theme_dirpath.mkdir(exist_ok=True)
-    with Path(
-        f"{dist_theme_dirpath / name}.{theme_type}{THEME_FILE_EXTENSION}",
-    ).open("w") as file:
-        file.write(json.dumps(theme_file_content, indent=INDENTATION))
-
-    return theme
-
-
-def create_variant_theme(base_theme: dict, variant_path: Path | str) -> dict:
-    if isinstance(variant_path, str):
-        variant_path = Path(variant_path)
-
-    variant_theme: dict = base_theme.copy()
-    with variant_path.open() as file:
-        variant_sub_theme: dict[str, str] = json.loads(file.read())
-        for color_name, color_value in variant_sub_theme.items():
-            variant_theme[color_name] = color_value
-
-    return variant_theme
+        return self
 
 
 def main() -> None:
-    theme_name: str = THEME_NAME
-
     src_config_dirpath: Path = Path(SRC_CONFIG_DIRPATH)
-    base_config: dict
+    config: dict
     with Path(src_config_dirpath / SRC_BASE_CONFIG_FILENAME).open() as file:
-        base_config = json.loads(file.read())
+        config = json.loads(file.read())
 
     with scandir(src_config_dirpath) as type_entries:
         for type_entry in type_entries:
@@ -323,17 +266,13 @@ def main() -> None:
 
             type_name: str = type_entry.name
             type_dirpath: Path = Path(type_entry)
-            base_theme: dict = {}
-            with Path(type_dirpath / SRC_BASE_THEME_FILENAME).open() as file:
-                base_theme.update(json.loads(file.read()))
+            colors: dict = {}
+            with Path(type_dirpath / SRC_BASE_COLORS_FILENAME).open() as file:
+                colors.update(json.loads(file.read()))
 
-            # Create base theme
-            create_theme_file(
-                base_theme,
-                type_name,
-                base_config,
-                theme_name,
-            )
+            theme = Theme(UiTheme[type_name.upper()], colors, config)
+            theme.build()
+            theme.create_file()
 
             # Create variant themes
             variants_dirpath: Path = type_dirpath / SRC_VARIANT_THEMES_DIR
@@ -349,14 +288,15 @@ def main() -> None:
                     if variant_path.suffix != ".json":
                         continue
 
-                    variant_theme: dict = create_variant_theme(base_theme, variant_path)
+                    variant_colors: dict = {}
+                    with variant_path.open() as file:
+                        variant_colors: dict = json.loads(file.read())
 
-                    create_theme_file(
-                        variant_theme,
-                        type_name,
-                        base_config,
-                        f"{THEME_NAME} {variant_path.stem}",
-                    )
+                    variant_theme = copy(theme)
+                    variant_theme.set_variant_name(variant_path.stem)
+                    variant_theme.set_theme_colors(variant_colors)
+                    variant_theme.build()
+                    variant_theme.create_file()
 
 
 if __name__ == "__main__":
