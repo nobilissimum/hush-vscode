@@ -18,6 +18,7 @@ from utils.settings import (
     THEME_FILE_EXTENSION,
     THEME_NAME,
 )
+from utils.utils import sort_object
 
 BASE_COLOR_PATTERN: Pattern = compile(
     r"^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6}|[A-Fa-f0-9]{8})$|^$",
@@ -236,8 +237,8 @@ class Theme:
         ui_theme: str = self.ui_theme.value
         theme: dict = {
             "type": ui_theme,
-            "colors": self.colors,
-            "tokenColors": self.token_colors,
+            "colors": sort_object(self.colors),
+            "tokenColors": sort_object(self.token_colors),
         }
 
         dist_theme_dirpath: Path = Path(DIST_THEMES_DIRPATH)
