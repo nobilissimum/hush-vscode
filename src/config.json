@@ -168,6 +168,11 @@
       ]
     },
     "dark": {
+      "light_77": [
+        "scrollbarSlider.activeBackground",
+        "scrollbarSlider.background",
+        "scrollbarSlider.hoverBackground"
+      ],
       "$": [
         "activityBar.background",
         "breadcrumb.background",
@@ -188,17 +193,15 @@
         "titleBar.inactiveBackground"
       ]
     },
-    "dark77": {
-      "77": [
-        "scrollbarSlider.activeBackground",
-        "scrollbarSlider.background",
-        "scrollbarSlider.hoverBackground"
-      ]
-    },
     "light": {
       "$": ["editor.background", "tab.activeBackground"]
     },
     "main": {
+      "light_33": [
+        "minimapSlider.activeBackground",
+        "minimapSlider.background",
+        "minimapSlider.hoverBackground"
+      ],
       "$": [
         "editor.findRangeHighlightBackground",
         "editor.lineHighlightBackground",
@@ -375,13 +378,6 @@
         "editorBracketHighlight.foreground1",
         "terminal.ansiBrightYellow",
         "terminal.ansiYellow"
-      ]
-    },
-    "main33": {
-      "33": [
-        "minimapSlider.activeBackground",
-        "minimapSlider.background",
-        "minimapSlider.hoverBackground"
       ]
     },
     "foreground": {

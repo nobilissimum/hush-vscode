@@ -83,6 +83,10 @@ class Color:
     def __str__(self) -> str:
         return self.value
 
+    def add_padding_to_hex(self, hex_str: str) -> str:
+        padding = "0" * (2 - len(hex_str))
+        return f"{padding}{hex_str}"
+
     def validate_alpha(self, alpha: str) -> str:
         if not alpha:
             return alpha
@@ -135,7 +139,9 @@ class Color:
         )
 
         bases = tuple(
-            hex(round((base - extras[index]) / base_alpha))[2:]
+            self.add_padding_to_hex(
+                hex(round(max(base - extras[index], 0) / base_alpha))[2:],
+            )
             for index, base in enumerate(bases)
         )
         return f"#{''.join(bases)}{self.base_alpha}".lower()
@@ -178,8 +184,21 @@ class Theme:
         colors: dict[str, str] = {}
 
         for color_name, color_variants in self.theme_config["colors"].items():
-            for alpha, scopes in color_variants.items():
-                color: Color = Color(self.theme_colors.get(color_name, ""), alpha)
+            for variant_alpha, scopes in color_variants.items():
+                alpha: str = variant_alpha
+                base_alpha: str = ""
+                extra_color: str = ""
+                if "_" in alpha:
+                    alpha = ""
+                    extra_color_name, base_alpha = variant_alpha.split("_")
+                    extra_color = self.theme_colors[extra_color_name]
+
+                color: Color = Color(
+                    self.theme_colors.get(color_name, ""),
+                    alpha,
+                    base_alpha,
+                    extra_color,
+                )
 
                 for color_scope in scopes:
                     colors[color_scope] = color.value

@@ -12,6 +12,14 @@
       "args": [
         "--extensionDevelopmentPath=${workspaceFolder}"
       ]
+    },
+    {
+      "name": "Build",
+      "type": "debugpy",
+      "program": "${workspaceFolder}/main.py",
+      "request": "launch",
+      "console": "integratedTerminal",
+      "args": ["build"]
     }
   ]
 }
