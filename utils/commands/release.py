@@ -52,6 +52,9 @@ def increase_version(package_config: dict, release: Release) -> dict:
         int(revision) for revision in package_config["version"].split(".")
     ]
     revisions[release.value] = revisions[release.value] + 1
+    revisions[release.value + 1 :] = [
+        0 for _ in range(len(revisions[release.value + 1 :]))
+    ]
     package_config["version"] = ".".join(str(revision) for revision in revisions)
 
     return package_config
