@@ -1,63 +1,12 @@
+exclude = [".ruff_cache", ".venv", "__pypackages__", "__pycache__"]
+indent-width = 4
+line-length = 88
+show-fixes = true
+target-version = "py310"
+
+[lint]
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
-exclude = [".ruff_cache", ".venv", "__pypackages__", "node_modules", "venv"]
-extend-select = [
-  "A",
-  "ANN",
-  "ARG",
-  "ASYNC",
-  "B",
-  "BLE",
-  "C",
-  "C4",
-  "C90",
-  "COM",
-  "CPY",
-  "D",
-  "DJ",
-  "DTZ",
-  "E",
-  "EM",
-  "ERA",
-  "EXE",
-  "F",
-  "FA",
-  "FBT",
-  "FIX",
-  "G",
-  "I",
-  "ICN",
-  "INP",
-  "INT",
-  "ISC",
-  "LOG",
-  "N",
-  "NPY",
-  "PD",
-  "PGH",
-  "PIE",
-  "PL",
-  "PT",
-  "PTH",
-  "PYI",
-  "Q",
-  "RET",
-  "RSE",
-  "RUF",
-  "S",
-  "SIM",
-  "SLF",
-  "SLOT",
-  "T10",
-  "T20",
-  "TCH",
-  "TD",
-  "TID",
-  "TRIO",
-  "TRY",
-  "UP",
-  "W",
-  "YTT",
-]
+extend-select = ["ALL"]
 ignore = [
   "ANN002", # Type annotation for *args
   "ANN003", # Type annotation for **kwargs
@@ -65,7 +14,6 @@ ignore = [
   "ANN102", # Type annotation for cls
   "ANN206", # Return type annotation for classmethod
   "ANN401", # Dynamically typed expressions
-  "ERA001", # Commented-out code
   "D100",   # Docstring in public module
   "D101",   # Docstring in public class
   "D102",   # Docstring in public method
@@ -76,12 +24,12 @@ ignore = [
   "D107",   # Docstring in __init__ method
   "D203",   # Incompatible with D211
   "D213",   # Incompatible with D212
-  "S311",   # Pseudo-random generators
-  "T203",   # pprint()
 ]
-line-length = 88
-show-fixes = true
-target-version = "py310"
 
-[isort]
+[format]
+indent-style = "space"
+line-ending = "lf"
+quote-style = "double"
+
+[lint.isort]
 lines-between-types = 1

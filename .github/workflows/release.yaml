@@ -17,13 +17,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Get hush version
+        run: echo "VERSION=$(jq -r '.version' package.json)" >> $GITHUB_ENV
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Get hush version
-        run: echo "VERSION=$(jq -r '.version' package.json)" >> $GITHUB_ENV
       - name: Setup Pipenv
         uses: tiagovrtr/actions-pipenv@v1
         with:

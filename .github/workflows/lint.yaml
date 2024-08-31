@@ -1,0 +1,47 @@
+name: Lint
+
+on: pull_request
+
+jobs:
+  ruff:
+    name: Ruff
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Setup Pipenv
+        uses: tiagovrtr/actions-pipenv@v1
+        with:
+          pipenv-version: '2024.0.1'
+      - name: Create Python environment
+        run: |
+          PIPENV_VENV_IN_PROJECT=1 pipenv install
+          PIPENV_VENV_IN_PROJECT=1 pipenv install -d
+          source .venv/bin/activate
+
+      - name: Lint check
+        run: pipenv run ruff check .
+
+  json:
+    name: JSON
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: '1.1.16'
+      - name: Install json linter
+        run: bun install -d --frozen-lockfile
+      - name: Lint check
+        run: bun run lint

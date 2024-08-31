@@ -27,6 +27,7 @@
     "Themes"
   ],
   "scripts": {
+    "lint": "bunx jsonlint-cli $(git ls-files **/*.json)",
     "package": "bunx vsce package && ./move_package.sh"
   },
   "contributes": {
@@ -50,5 +51,8 @@
   },
   "dependencies": {
     "@vscode/vsce": "^3.0.0"
+  },
+  "devDependencies": {
+    "jsonlint-cli": "^1.0.1"
   }
 }
