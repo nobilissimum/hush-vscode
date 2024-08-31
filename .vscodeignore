@@ -6,6 +6,7 @@ __pycache__
 utils
 
 .ruff.toml
+.ruff_cache
 Pipfile
 Pipfile.lock
 

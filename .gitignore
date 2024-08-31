@@ -7,6 +7,7 @@ themes
 # Python
 __pycache__
 *.pyc
+.ruff_cache
 .venv
 
 # Per-machine state
