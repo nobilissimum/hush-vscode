@@ -2,6 +2,16 @@
 
 All notable changes to the **hush** extension will be documented in this file.
 
+## [1.9.0] - 2024-08-31
+
+### Minor Enhancements 💄
+
+- Refactor build script to OOP by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/33
+- Automate attachment of release assets by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/34
+- Add linters for python and JSON by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/35
+- Align color of multi-diff editor header backend by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/36
+- Ignore ruff cache by @nobilissimum in https://github.com/nobilissimum/hush-vscode/pull/37
+
 ## [1.8.0] - 2024-08-18
 
 ### Major Enhancements 🎉
