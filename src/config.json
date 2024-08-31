@@ -182,6 +182,7 @@
         "editorSuggestWidget.border",
         "editorWidget.border",
         "input.background",
+        "multiDiffEditor.headerBackground",
         "panel.background",
         "peekView.border",
         "peekViewResult.background",
