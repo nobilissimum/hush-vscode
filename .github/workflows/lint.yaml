@@ -3,7 +3,7 @@ name: Lint
 on: pull_request
 
 jobs:
-  lint:
+  ruff:
     name: Ruff
     runs-on: ubuntu-latest
     steps:
@@ -28,3 +28,20 @@ jobs:
 
       - name: Lint check
         run: pipenv run ruff check .
+
+  json:
+    name: JSON
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: '1.1.16'
+      - name: Install json linter
+        run: bun install -d --frozen-lockfile
+      - name: Lint check
+        run: bun run lint
