@@ -21,13 +21,13 @@ from utils.settings import (
 from utils.utils import sort_object
 
 BASE_COLOR_PATTERN: Pattern = compile(
-    r"^#([A-Fa-f0-9]{3}|[A-Fa-f0-9]{6}|[A-Fa-f0-9]{8})$|^$",
+    r"^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{8})$|^$",
 )
 ALPHA_COLOR_PATTERN: Pattern = compile(r"^[A-Fa-f0-9]{2}")
 
 HEX_LENGTH: Final[int] = 2
 RGB_HEX_LENGTH: Final[int] = 6
-RGB_HEX_LENGTH_SHORT: Final[int] = 3
+RGB_LENGTH_WITH_ALPHA: Final[int] = 9
 
 HEX_BASE: Final[int] = 16
 HEX_MAX: Final[int] = 255
@@ -59,16 +59,6 @@ class Color:
             error_message: str = f"The base color {base} should be hexadecimal"
             raise AssertionError(error_message)
 
-        base_length: int = len(base)
-        base_length_index: int
-        if base_length >= RGB_HEX_LENGTH:
-            base_length_index = RGB_HEX_LENGTH + 1
-        elif base_length >= RGB_HEX_LENGTH_SHORT:
-            base_length_index = RGB_HEX_LENGTH_SHORT + 1
-        else:
-            base_length_index = 0
-
-        base = base[:base_length_index]
         extra, base_alpha = self.validate_extra(extra, base_alpha)
 
         alpha = alpha[:HEX_LENGTH]
@@ -119,7 +109,7 @@ class Color:
             return None
 
         if not self.extra:
-            return f"{self.base}{self.alpha}"
+            return f"{self.base}{self.alpha}"[:9]
 
         base_hex: str = self.base[1:]
         bases: tuple[int, int, int] = tuple(
