@@ -57,7 +57,7 @@ def increase_version(package_config: dict, release: Release) -> dict:
     return package_config
 
 
-def main(release: str = Release.MINOR.name.lower()) -> None:
+def main(release: str | None = None) -> None:
     package_config: dict
     with Path(NODE_PACKAGE_PATH).open() as f:
         package_config = json.loads(f.read())
@@ -81,10 +81,11 @@ def main(release: str = Release.MINOR.name.lower()) -> None:
     package_contributes["themes"] = themes
     package_config["contributes"] = package_contributes
 
-    package_config = increase_version(
-        package_config,
-        getattr(Release, release.upper(), Release.MINOR.name),
-    )
+    if release:
+        package_config = increase_version(
+            package_config,
+            getattr(Release, release.upper(), Release.MINOR.name),
+        )
     with Path(NODE_PACKAGE_PATH).open("w") as f:
         f.write(json.dumps(package_config, indent=2))
 
