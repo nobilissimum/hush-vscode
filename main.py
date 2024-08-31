@@ -48,7 +48,10 @@ def find_script(script_name: str) -> str | None:
     return None
 
 
-def run_script(script_path: str | Path, script_args: list[str]) -> None:
+def run_script(script_path: str | Path, script_args: list[str] | None = None) -> None:
+    if script_args is None:
+        script_args = []
+
     if isinstance(script_path, str):
         script_path: Path = Path(script_path)
 

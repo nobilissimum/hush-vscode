@@ -57,7 +57,7 @@ def increase_version(package_config: dict, release: Release) -> dict:
     return package_config
 
 
-def main(release: str) -> None:
+def main(release: str = Release.MINOR.name.lower()) -> None:
     package_config: dict
     with Path(NODE_PACKAGE_PATH).open() as f:
         package_config = json.loads(f.read())
