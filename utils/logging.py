@@ -7,7 +7,8 @@ from typing import Any
 from utils.settings import LOG_LEVEL
 
 max_level_length: int = max(
-    len(f"[{level}]") for level in logging._nameToLevel  # noqa: SLF001
+    len(f"[{level}]")
+    for level in logging._nameToLevel  # noqa: SLF001
 )
 
 
