@@ -1,0 +1,60 @@
+name: Release
+
+on:
+  release:
+    types:
+      - published
+
+env:
+  DESTDIR: './dist'
+
+jobs:
+  release:
+    name: 'Artifacts'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Get hush version
+        run: echo "VERSION=$(jq -r '.version' package.json)" >> $GITHUB_ENV
+      - name: Setup Pipenv
+        uses: tiagovrtr/actions-pipenv@v1
+        with:
+          pipenv-version: '2024.0.1'
+      - name: Create Python environment
+        run: |
+          PIPENV_VENV_IN_PROJECT=1 pipenv install
+          source .venv/bin/activate
+      - name: Build themes
+        run: |
+          pipenv run python3 main.py build
+          pipenv run python3 main.py release
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: '1.1.16'
+      - name: Install JS packages
+        run: bun install --frozen-lockfile
+      - name: Package theme
+        run: bun run package
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: hush-vscode
+          path: ${{ env.DESTDIR }}/*
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+
+      - name: GitHub release assets
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ env.DESTDIR }}/*
