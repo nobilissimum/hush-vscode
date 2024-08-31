@@ -1,10 +1,10 @@
+dist
 themes
 
 *.vsix
 *.hidden*
 
 # Python
-Pipfile.lock
 __pycache__
 *.pyc
 .venv

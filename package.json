@@ -27,7 +27,7 @@
     "Themes"
   ],
   "scripts": {
-    "package": "bunx vsce package"
+    "package": "bunx vsce package && ./move_package.sh"
   },
   "contributes": {
     "themes": [
