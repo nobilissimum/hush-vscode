@@ -1,0 +1,30 @@
+name: Lint
+
+on: pull_request
+
+jobs:
+  lint:
+    name: Ruff
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Setup Pipenv
+        uses: tiagovrtr/actions-pipenv@v1
+        with:
+          pipenv-version: '2024.0.1'
+      - name: Create Python environment
+        run: |
+          PIPENV_VENV_IN_PROJECT=1 pipenv install
+          PIPENV_VENV_IN_PROJECT=1 pipenv install -d
+          source .venv/bin/activate
+
+      - name: Lint check
+        run: pipenv run ruff check .
