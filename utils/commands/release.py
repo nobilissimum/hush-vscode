@@ -1,5 +1,6 @@
 import json
 
+from enum import Enum
 from functools import cmp_to_key
 from os import DirEntry, scandir
 from pathlib import Path
@@ -8,6 +9,15 @@ from utils.settings import (
     DIST_THEMES_DIRPATH,
     NODE_PACKAGE_PATH,
 )
+
+
+class Release(Enum):
+    MAJOR = 0
+    MINOR = 1
+    PATCH = 2
+
+    def __str__(self) -> str:
+        return str(self.value)
 
 
 def get_stem_and_suffixes(
@@ -37,7 +47,17 @@ def sort_themes(entry_a: DirEntry, entry_b: DirEntry) -> str:
     return 1 if name_a > name_b else -1
 
 
-def main() -> None:
+def increase_version(package_config: dict, release: Release) -> dict:
+    revisions: list[int] = [
+        int(revision) for revision in package_config["version"].split(".")
+    ]
+    revisions[release.value] = revisions[release.value] + 1
+    package_config["version"] = ".".join(str(revision) for revision in revisions)
+
+    return package_config
+
+
+def main(release: str) -> None:
     package_config: dict
     with Path(NODE_PACKAGE_PATH).open() as f:
         package_config = json.loads(f.read())
@@ -61,6 +81,10 @@ def main() -> None:
     package_contributes["themes"] = themes
     package_config["contributes"] = package_contributes
 
+    package_config = increase_version(
+        package_config,
+        getattr(Release, release.upper(), Release.MINOR.name),
+    )
     with Path(NODE_PACKAGE_PATH).open("w") as f:
         f.write(json.dumps(package_config, indent=2))
 
