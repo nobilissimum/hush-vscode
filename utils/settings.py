@@ -11,7 +11,7 @@ COLOR_HEX_LENGTH: Final[int] = 9
 
 SRC_VARIANT_THEMES_DIR: Final[str] = "variants"
 SRC_BASE_CONFIG_FILENAME: Final[str] = "config.json"
-SRC_BASE_THEME_FILENAME: Final[str] = "colors.json"
+SRC_BASE_COLORS_FILENAME: Final[str] = "colors.json"
 
 DIST_THEMES_DIRPATH: Final[str] = "themes"
 
