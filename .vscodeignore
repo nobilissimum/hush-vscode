@@ -13,7 +13,8 @@ Pipfile.lock
 *.py
 *.pyc
 
-# Config
+# Distributable and config
+dist
 src
 
 # Unnecessary to package

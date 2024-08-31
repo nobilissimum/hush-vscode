@@ -25,6 +25,11 @@ logger = logging.getLogger()
 def parse_args() -> Namespace:
     parser: ArgumentParser = ArgumentParser(description="Run a command script.")
     parser.add_argument("script_name", type=str, help="The name of the script to run")
+    parser.add_argument(
+        "script_args",
+        nargs="*",
+        help="Arguments to pass to the script",
+    )
     return parser.parse_args()
 
 
@@ -43,7 +48,10 @@ def find_script(script_name: str) -> str | None:
     return None
 
 
-def run_script(script_path: str | Path) -> None:
+def run_script(script_path: str | Path, script_args: list[str] | None = None) -> None:
+    if script_args is None:
+        script_args = []
+
     if isinstance(script_path, str):
         script_path: Path = Path(script_path)
 
@@ -54,7 +62,7 @@ def run_script(script_path: str | Path) -> None:
     if not hasattr(module, "main"):
         logger.error("Script `%a` does not have a main function.", script_path)
 
-    module.main()
+    module.main(*script_args)
 
 
 def main() -> None:
@@ -68,8 +76,8 @@ def main() -> None:
         )
         return
 
-    logger.info("Running script: %a", script_path)
-    run_script(script_path)
+    logger.info("Running script: %a with args: %a", script_path, args.script_args)
+    run_script(script_path, args.script_args)
     return
 
 

@@ -4,12 +4,12 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-watchdog = "*"
-python-dotenv = "*"
+watchdog = "5.0.0"
+python-dotenv = "1.0.1"
 
 [dev-packages]
-ruff = "*"
-black = "*"
+ruff = "0.6.3"
+black = "24.8.0"
 
 [requires]
-python_version = "3.10"
+python_version = "3.12"

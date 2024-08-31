@@ -11,7 +11,7 @@
     "theme": "dark"
   },
   "engines": {
-    "bun": "v1.0.14",
+    "bun": "v1.1.16",
     "vscode": "^1.19.0"
   },
   "homepage": "https://github.com/nobilissimum/hush-vscode/blob/main/README.md",
@@ -27,7 +27,7 @@
     "Themes"
   ],
   "scripts": {
-    "package": "bunx vsce package"
+    "package": "bunx vsce package && ./move_package.sh"
   },
   "contributes": {
     "themes": [
@@ -49,6 +49,6 @@
     ]
   },
   "dependencies": {
-    "vsce": "^2.15.0"
+    "@vscode/vsce": "^3.0.0"
   }
 }
